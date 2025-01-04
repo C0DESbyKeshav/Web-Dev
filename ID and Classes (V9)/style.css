@@ -1,0 +1,13 @@
+/* Classes in css are defined by (.)
+and id's are represented by (#) */
+
+.red{
+    color:red;
+}
+.bg_yellow{
+    background-color:yellow;
+}
+
+#firstdiv{
+    /*background-color:yellow;*/
+}

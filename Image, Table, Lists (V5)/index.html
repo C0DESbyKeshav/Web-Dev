@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keshav Mandal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- IMAGE-->
+    <!-- If you set the height, width gets automatically set and vice versa -->
+    <h1>IMAGE</h1>
+    <img height="200" src="ice.png" alt="Ice Image">
+
+    <br><br><br>
+
+    <!-- TABLE -->
+    <!-- Table headers and footers are just for grouping. They don't modify anything in the table -->
+    <h1>TABLE</h1>
+    <table>
+
+        <caption>Employee Details</caption>
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Designation</th>
+                <td>Header</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Keshav</td>
+                <td>18</td>
+                <td>Programmer</td>
+                <td rowspan = "3">Body</td>
+            </tr>
+            <tr>
+                <td>Sid</td>
+                <td>19</td> 
+                <td>Mathematician</td>
+            </tr>
+            <tr>
+                <td colspan="2">Chhateeslal</td>
+                <td>Driver</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Akash</td>
+                <td>22</td>
+                <td rowspan="2">Programmer</td>
+                <td rowspan ="2">Footer</td>
+            </tr>
+            <tr>
+                <td>Harendra</td>
+                <td>18</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <br><br><br>
+
+    <!-- LISTS -->
+    <!-- There are three types of lists in HTML -->
+    <h1>LISTS</h1>
+    
+    <p>
+        <h2>Unordered Lists</h2>
+        <ul>
+            <li>By Default</li>
+            <li type="square">Square</li>
+            <li type ="circle">Circle</li>
+        </ul>
+    </p>
+    
+    <p>
+        <h2>Ordered Lists</h2>
+        <ol>
+            <li>Mango</li>
+            <li type="A">Apple</li>
+            <li type ="i">Orange</li>
+            <li type ="a">Orange</li>
+            <li type ="I">Orange</li>
+        </ol>
+    </p>
+
+    <p>
+        <h2>Definition Lists</h2>
+        <dl>
+            <dt><h3>Mango</h3></dt>
+            <dd>It is a fruit. It is known to be the King of all the fruits. It is yellow in colour. It is famous specially in the state of Maharashtra in rainy season.</dd>
+
+
+            <dt><h3>C++</h3></dt>
+            <dd>It is one of the oldest yet popular programming languages. It is also considered as one of the hardest programming languages.</dd>
+        </dl>
+    </p>
+
+</body>
+
+</html>

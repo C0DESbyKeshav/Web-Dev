@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms- Chalo bharte hai</title>
+</head>
+
+<body>
+    <h1>Apply for butler at KESHAV's MANSION</h1>
+    <form action="post">
+        <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="BLOCK letters only" autofocus>
+        </div>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="rather" name="gender" value="rather">
+            <label for="rather">Rather not say</label>
+            <!-- 'for' to select the gender just by clicking on the text -->
+            <!-- Since, 'name' is same for both the genders, only one gender can be selected at a time -->
+        </div>
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">I am not infected with any chronic disease</label>
+        </div>
+        <div>
+            <label for="elaborate">If any, kindly mention (in block letters)</label><br>
+            <textarea id="elaborate" name="comment" rows="4" cols="50">Elaborate here
+            </textarea>
+            <!-- Use of br tag is never a good choice and not recommended -->
+        </div>
+        <div>
+            <label for="nom">Number of members in your house</label><br>
+            <select id ="nom" name="nom">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </form>
+</body>
+
+</html>

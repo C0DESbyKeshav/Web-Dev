@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quick Quiz: Without using br tag, write a vertically aligned form asking for name, city and pincode of a user -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form without br tag</title>
+</head>
+<body>
+    <form action="post">
+        <div>
+            <label for="name">NAME:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" autofocus required>
+        </div>
+        <div>
+            <label for="city">CITY:</label>
+            <select name="city" id="city" placeholder="Select">
+                <option value="1">Select</option>
+                <option value="2">Delhi</option>
+                <option value="3">Chennai</option>
+                <option value="4">Mumbai</option>
+                <option value="5">Banglore</option>
+                <option value="6">Hyderabad</option>
+            </select>
+        </div>
+        <div>
+            <label for="pin">PINCODE:</label>
+            <input type="text" id="pin" name="pin" placeholder="Enter your pincode number" required>
+        </div>
+    </form>
+</body>
+</html>
