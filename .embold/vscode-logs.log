@@ -1,0 +1,58 @@
+2025-03-14 22:25:08 info: Congratulations, your extension "Embold" is now active!
+2025-03-14 22:25:08 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.1.9\temp
+2025-03-14 22:25:14 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.1.9\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.1.9\temp
+2025-03-14 22:25:14 info: Extension installed on machine OS : win32
+2025-03-14 22:25:14 info: Fetched the issues from DB
+2025-03-14 22:25:15 info: Java version installed on machine : 
+java version "1.8.0_361"
+Java(TM) SE Runtime Environment (build 1.8.0_361-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.361-b09, mixed mode)
+
+2025-03-14 22:25:15 info: Java installed on machine.
+2025-03-14 22:25:17 info: Embold extension version response:{"hasSupport":false,"version":"0.1.6","changeNotes":"<div> <p>Release Date: 09 Oct, 2023 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-03-14 22:25:17 info: Current installed embold extension version : 0.1.9
+2025-03-14 22:25:17 info: Latest embold extension version on marketplace : 0.1.6
+2025-03-14 22:26:18 info: Row(s) deleted
+2025-03-14 22:26:47 info: Row(s) deleted
+2025-03-14 22:27:13 info: Row(s) deleted
+2025-03-14 22:27:32 info: Row(s) deleted
+2025-03-14 22:27:54 info: Row(s) deleted
+2025-03-14 22:28:17 info: Row(s) deleted
+2025-03-14 22:28:46 info: Row(s) deleted
+2025-03-14 22:49:02 info: Row(s) deleted
+2025-03-14 22:49:15 info: Row(s) deleted
+2025-03-14 22:49:46 info: Row(s) deleted
+2025-03-15 10:09:26 info: Congratulations, your extension "Embold" is now active!
+2025-03-15 10:09:26 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.1.9\temp
+2025-03-15 11:30:08 info: Congratulations, your extension "Embold" is now active!
+2025-03-15 11:30:08 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.1.9\temp
+2025-03-15 11:30:19 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.1.9\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.1.9\temp
+2025-03-15 11:30:19 info: Extension installed on machine OS : win32
+2025-03-15 11:30:19 info: Fetched the issues from DB
+2025-03-15 11:30:19 info: Java version installed on machine : 
+java version "1.8.0_361"
+Java(TM) SE Runtime Environment (build 1.8.0_361-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.361-b09, mixed mode)
+
+2025-03-15 11:30:19 info: Java installed on machine.
+2025-03-15 11:30:20 info: Embold extension version response:{"hasSupport":false,"version":"0.1.6","changeNotes":"<div> <p>Release Date: 09 Oct, 2023 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-03-15 11:30:20 info: Current installed embold extension version : 0.1.9
+2025-03-15 11:30:20 info: Latest embold extension version on marketplace : 0.1.6
+2025-05-09 15:56:35 info: Congratulations, your extension "Embold" is now active!
+2025-05-09 15:56:35 info: ************* init ****************
+2025-05-09 15:56:35 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.2.1\temp
+2025-05-09 15:56:38 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.2.1\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.2.1\temp
+2025-05-09 15:56:38 info: Extension installed on machine OS : win32
+2025-05-09 15:56:38 info: Fetched the issues from DB
+2025-05-09 15:56:38 error: request to https://v1.embold.io/api/plugins failed, reason: getaddrinfo ENOTFOUND v1.embold.io
+2025-05-09 15:56:38 info: Current installed embold extension version : 0.2.1
+2025-05-09 15:56:38 info: Latest embold extension version on marketplace : 0.1.11
+2025-05-09 15:56:38 info: Current extension version: 0.2.1
+2025-05-09 15:56:38 info: Stored extension version: 0.2.1
+2025-05-09 15:56:38 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-05-09 15:56:38 info: Java version installed on machine : 
+openjdk version "21.0.6" 2025-01-21 LTS
+OpenJDK Runtime Environment Temurin-21.0.6+7 (build 21.0.6+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, sharing)
+
+2025-05-09 15:56:38 info: Java installed on machine.
