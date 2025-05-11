@@ -63,9 +63,21 @@
             const input = document.getElementById('inputText').value;
             const lines = input.split('\n');
             const reversedLines = lines.map(line => {
-                const words = line.split(' ');
-                const reversedWords = words.map(word => word.split('').reverse().join(''));
-                return reversedWords.join(' ');
+                // Split the line into words while preserving punctuation
+                const words = line.split(/(\s+)/);
+                const reversedWords = words.map(word => {
+                    // Check if the word contains punctuation
+                    const punctuationMatch = word.match(/[.,!?;:]/);
+                    if (punctuationMatch) {
+                        // If word ends with punctuation, reverse the word part and keep punctuation
+                        const punctuation = word.slice(-1);
+                        const wordPart = word.slice(0, -1);
+                        return wordPart.split('').reverse().join('') + punctuation;
+                    }
+                    // If no punctuation, just reverse the word
+                    return word.split('').reverse().join('');
+                });
+                return reversedWords.join('');
             });
             const result = reversedLines.join('\n');
             document.getElementById('output').textContent = result;
@@ -73,12 +85,40 @@
 
         function copyOutput() {
             const outputText = document.getElementById('output').textContent;
-            navigator.clipboard.writeText(outputText).then(() => {
-                alert('Text copied to clipboard!');
-            }).catch(err => {
+            if (!outputText) {
+                alert('No text to copy!');
+                return;
+            }
+
+            // Create a temporary textarea element
+            const textarea = document.createElement('textarea');
+            textarea.value = outputText;
+            textarea.style.position = 'fixed';  // Prevent scrolling to bottom
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+                // Try using the modern clipboard API first
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(outputText).then(() => {
+                        alert('Text copied to clipboard!');
+                    }).catch(() => {
+                        // Fallback to execCommand if clipboard API fails
+                        document.execCommand('copy');
+                        alert('Text copied to clipboard!');
+                    });
+                } else {
+                    // Fallback for older browsers
+                    document.execCommand('copy');
+                    alert('Text copied to clipboard!');
+                }
+            } catch (err) {
                 console.error('Failed to copy text: ', err);
                 alert('Failed to copy text. Please try again.');
-            });
+            } finally {
+                // Clean up
+                document.body.removeChild(textarea);
+            }
         }
     </script>
 </body>
