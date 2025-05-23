@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div><video src="video.mp4" poster="poster.jpg" height="600" controls loop ></video></div>
+    <div><video src="video.mp4" poster="poster.jpg" height="600" controls loop></video></div>
     <!-- Attributes: src, controls, autoplay, loop, muted, poster, width, height -->
     <div><audio src="Death Note Ryuk's Theme.mp3" controls preload></audio></div>
     <!-- Attributes: src, controls, autoplay, loop, muted, preload -->
-    <!-- preload: Specifies if and how the audio should be loaded when the page loads ('auto', 'metadata', 'none'). --> 
-    
+    <!-- preload: Specifies if and how the audio should be loaded when the page loads ('auto', 'metadata', 'none'). 
+    The "preload" attribute can have the following values:
+    1. none: This is the default value. It indicates that the browser should not preload the audio file at all. The audio file will only start downloading when the user initiates playback.
+    2. metadata: This value tells the browser to preload only the metadata of the audio file, such as its duration and basic information about the audio. This can be useful if you want to display the audio duration to the user without fully loading the audio data.
+    3. auto: This value instructs the browser to preload the entire audio file as much as possible without delaying the loading of other important page content. The browser will try to load the audio file in the background so that it's ready to play when the user decides to start it.-->
+
     <!-- SVG stands for Scalable Vector Graphics. Unlike raster images like PNGs or JPGs, SVGs are not pixel-based. They're composed of vectors—mathematical formulas that describe shapes, paths, and fills. This means SVGs can be resized without losing quality. -->
     <!-- To directly display an svg image: -->
-    <svg height="100" width="100"><circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /></svg>
+    <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
     <!-- To save the svg file and then display it: -->
     <div><img src="img.svg" alt="SVG File"></div>
     <!-- To directly display an svg image: -->
-    <svg height="100" width="100"><circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="green" /></svg>
+    <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="green" />
+    </svg>
 
     <!-- iFrames -->
     <div><iframe src="https://www.codewithharry.com/tutorial/html-iframes/" height="500" width="500"></iframe></div>
-    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=dii9D_5DSi_YV15F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=dii9D_5DSi_YV15F"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
     <!-- Attributes: src, height, width, frameborder, scrolling, name -->
 
     <!-- Quick Quiz: Create a website which shows videos and audios of different categories. -->
 </body>
+
 </html>
