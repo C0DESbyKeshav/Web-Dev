@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            /* for both the div */
+            background-color: aquamarine;
+        }
+
+        .box1 {
+            /* for div of class 'box1' */
+            color: red;
+            margin: 35px;
+            border: 2px solid black;
+            padding: 10px;
+            height: 100px;
+            width: 1000px;
+            box-sizing: border-box;
+            /* Here, when we write box-sizing:border-box then we say to CSS that the height=100px that I have provided is the inclusive height of content + padding + border
+            But before, without the box-sizing, the alone height of the content of the box is 100px */
+        }
+
+        .box2 {
+            /* for div of class 'box2' */
+            color: blue;
+            margin: 35px;
+            border: 2px solid black;
+            padding: 10px;
+            height: 100px;
+            width: 1000px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The below div is given two classes: box and box1 since, single element can have multiple classes but a single id only -->
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+
+    <!-- *Background color of an element content aur padding pe lagta hai (border ke andar); margin pe nahi lagta (border ke bahar) -->
+
+    <!-- *Calculating the total dimension of the element
+    The total width and height of the element is calculated with the formula:
+    Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+    Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin -->
+</body>
+
+</html>

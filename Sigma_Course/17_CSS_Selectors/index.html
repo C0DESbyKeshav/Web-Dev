@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element Selector 
+        div{
+            background-color:orange
+        }
+        */
+
+        /* Class Selector */
+        .orange {
+            background-color: orange
+        }
+
+        /* ID Selector */
+        #ashoka-chakra {
+            color: blue
+        }
+
+        /* Child Selectors - div ke andar ke p tag ka bg color green ho jaayega */
+        div>p {
+            background-color: green;
+        }
+
+        /* Descendant Selectors - p tag div ke andar hona chahiye bhale hi kitne bhi layers baad ho */
+        div p {
+            background-color: brown;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        /* Pseudo Selector */
+        a:visited {
+            /* Visited links color */
+            color: red
+        }
+
+        a:link {
+            /* Non-visited links color */
+            color: green
+        }
+
+        a:active {
+            /* Color on click */
+            color: aqua
+        }
+
+        a:hover {
+            /* Color on hover */
+            background-color: yellow;
+        }
+
+        h1:first-child {
+            /* Jaha jaha h1 apne parent ka first child hoga udar apply karo */
+            background-color: yellow;
+        }
+
+        h1:nth-child(3){
+            background-color: red;
+        }
+        
+        /* A little heavy example of selector:
+        p.intro:first-letter {
+        font-size: 200%;
+        color: red;
+        }
+
+        → Makes the first letter of <p class="intro"> bigger and red.
+        */
+    </style>
+</head>
+
+<body>
+    <div class="orange">I am a div</div>
+
+    <div id="ashoka-chakra">I am second div</div>
+    <!-- I want that orange bg color property sirf first waale div pe lage aur second waale pe nahi then we will name a class in the first div and then declare a class selector in head section -->
+
+    <div>
+        <p>I am the third div</p>
+    </div>
+
+    <div>
+        <article>
+            <p><b>I LOVE Aurora</b></p>
+        </article>
+    </div>
+
+    <div>
+        <h3><a target="_blank" href="https://github.com/C0DESbyKeshav">My GitHub Profile</a></h3>
+        <h3><a target="_blank" href="https://www.instagram.com/keshav_m03">My Insta Profile</a></h3>
+    </div>
+
+    <div>
+        <h1>I</h1>
+        <h1>Love</h1>
+        <h1>Travelling</h1>
+    </div>
+</body>
+
+</html>

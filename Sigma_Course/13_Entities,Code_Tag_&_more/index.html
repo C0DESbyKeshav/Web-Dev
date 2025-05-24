@@ -1,13 +1,145 @@
 <!doctype <html>
-    <html lang ="en">
-        <head>
-            <meta charset ="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="Concluding HTML">
-            <title>Miscellaneous Tags</title>
-            <!-- <link rel="stylesheet", href="style.css"> -->
-        </head>
-        <body>
-            
-        </body>
-    </html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Concluding HTML">
+    <title>Miscellaneous Tags</title>
+    <!-- <link rel="stylesheet", href="style.css"> -->
+</head>
+
+<body>
+    <!-- *Entities in HTML:
+            Entities enables you to display characters that are reserved in HTML or that aren't readily available on the keyboard. -->
+
+    <!-- *Why Use HTML Entities?
+            Here are some reasons:
+            1. Reserved Characters: Characters like <, >, and & are reserved in HTML.
+            2. Special Symbols: For symbols like ©, ®, or mathematical symbols.
+            3. Non-Breaking Spaces: To create white spaces that won't break into a new line. -->
+
+    <!-- *Common HTML Entities:
+            &lt;  for <
+            &gt;  for >
+            &amp; for &
+            &nbsp; for a non-breaking space
+            &copy; for ©
+            -->
+
+    <!-- Examples: -->
+    3&lt;4: True
+    <p>This is the paragraph tag &lt;p&gt;Entities&lt;/p&gt;</p>
+    &amp;
+    <p>This is a copyright symbol &copy;</p>
+    <p>Dai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sukiiiiiiiiiiiiiiiiiii&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desu
+        !!</p>
+
+    <!-- These spaces and can also be obtained by using pre tag -->
+    <pre>
+        <p>Konichiwa</p>
+
+        
+        
+        <h1>Aishteru 💓</h1>
+
+
+As                    you                    can                        see, 
+these lines are displayed after few new lines  and few spaces in the browser in the same way they are.
+    </pre>
+
+
+    <!-- *HTML Quotation Tags:
+    In HTML, quotation tags are used to represent quoted or cited text.-->
+    <h4>Quotes</h4>
+    <!-- *1. <blockquote>
+        For long quotations that are usually displayed as block-level elements (i.e., they start on a new line and are often indented). -->
+    <blockquote>
+        The only limit to our realization of tomorrow is our doubts of today.
+    </blockquote>
+
+    <!-- *2. <q>
+        For short inline quotations. Browsers typically render this with quotation marks. -->
+    <p>He said, <q>Practice makes perfect.</q></p>
+
+    <!-- *3. <cite>
+    To cite the source of a quote, book, article, or creative work. Usually used for titles of works. -->
+    <p><cite>The Great Gatsby</cite> by F. Scott Fitzgerald</p>
+
+    <!-- *4. title attribute (within quotation tags)
+    Can be used with <q> or <blockquote> to provide additional context about the source. -->
+    <q title="Albert Einstein quote">Imagination is more important than knowledge.</q>
+
+
+    <!-- *Obsolete HTML Tags
+    As HTML has evolved, some tags have been deprecated or become obsolete.
+    While modern browsers might still support them, their use is discouraged in favor of CSS or more semantic HTML5 elements. 
+    
+    *Why Avoid Obsolete Tags?
+    Compatibility Issues: Not supported by all modern browsers.
+    Accessibility: This may not meet current web accessibility standards.
+    Maintenance: Makes future updates difficult.
+    
+    *List of Obsolete Tags:
+    <acronym>, <applet>, <basefont>, <big>, <blink>, <center>, <dir>, <font>, <frame>, <frameset>, <isindex>, <marquee>, <noframes>, <s>, <strike>, <tt>, <u>, <xmp>
+    -->
+
+
+    <!-- *Code Tag 
+    The <code> tag is a semantic HTML tag that's used for displaying code snippets.
+    It can be used both inline and within a block-level element like <pre>. -->
+
+    <!-- *Why Use the <code> Tag?
+    Semantic Meaning: Provides semantic value to the enclosed code.
+    Readability: This makes it easier for both browsers and developers to understand that the text is code.
+    Styling: Easier to style and highlight with CSS or JavaScript libraries like Prism. -->
+
+    <!-- *Using <code> with <pre>
+For multiline code snippets, it's common to combine the <code> tag with the <pre> tag: -->
+
+    <pre><code>#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+    cout<<"Hello World";
+    return 0;
+}
+    </code></pre>
+
+
+    <!-- *What is a Character Set?
+    A character set is a set of symbols and characters that a computer uses to represent text.
+    In HTML, specifying the correct character set ensures that text is displayed properly across different browsers and platforms. -->
+
+    <!-- *Why is it Important?
+    Using the correct character set is crucial for:
+    1. Accurate Rendering: To ensure that browsers correctly display your text.
+    2. Multi-language Support: To display text in various languages and alphabets.
+    3. Data Integrity: To make sure the data sent and received remains consistent.
+    <meta charset="UTF-8">
+    -->
+
+    <!-- *Common Character Sets
+    Here are some commonly used character sets:
+    UTF-8: Universal Character Set, 8-bit. It can represent any character in the Unicode standard.
+    ISO-8859-1: Western Alphabet.
+    ASCII: American Standard Code for Information Interchange. -->
+
+
+    <!-- *What is Canvas?
+    The <canvas> element serves as a container for graphics, which can be rendered via scripting.
+    Essentially, it offers a drawing area for visual content. -->
+
+    <!-- *Why Use Canvas?
+    Here are some reasons why you might use the <canvas> element:
+    Graphics: For drawing shapes, graphs, and other visual representations.
+    Dynamic Content: To dynamically update visual elements.
+    Interactivity: Though this involves JavaScript, the canvas element is the foundation for interactive graphical content. -->
+
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <!-- won't show anything visible by itself because:
+    The <canvas> element is just a blank drawing area.
+    You need to use JavaScript to actually draw on the canvas. -->
+</body>
+
+</html>
