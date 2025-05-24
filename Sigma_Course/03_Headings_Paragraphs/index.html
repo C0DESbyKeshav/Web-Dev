@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The first website of Keshav where he starts ">
+    <title>Keshav ka 1st website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Let’s break down each part of this HTML <head> section in simple terms with examples. -->
+
+<!--
+1. <head>...</head>
+The <head> section of an HTML page contains important meta-information about the webpage.
+It does not display anything directly on the webpage but provides instructions to the browser.
+Example: If a webpage is like a book, the <head> is like the information on the book’s cover (title, author, etc.).    
+-->
+
+<!--
+2. <meta charset="utf-8">
+This line tells the browser how to read and display text on the webpage.
+charset="utf-8" means the page uses the UTF-8 character set, which supports almost all languages and special symbols.
+Example: If you want to display special characters like ©, €, ₹, or 中文, UTF-8 ensures they show up correctly.
+-->
+
+<!--
+3. <meta name="viewport" content="width=device-width, initial-scale=1.0">
+This makes the webpage responsive, meaning it adjusts to different screen sizes (like mobile, tablet, or desktop).
+width=device-width: The page width will match the device’s screen width.
+initial-scale=1.0: The zoom level starts at 100% (normal size).
+Example: Without this, your webpage might look too big or too small on a mobile phone.
+-->
+
+<!--
+4. <meta name="description" content="">
+This provides a short summary of the webpage.
+Search engines like Google use this to show a description in search results.
+Example:
+<meta name="description" content="A website about Keshav's projects and ideas.">
+If someone searches for your site, Google might show:
+"A website about Keshav's projects and ideas."
+-->
+
+<!--
+5. <title>Keshav ka 1st website</title>
+This sets the title of the webpage that appears in the browser tab.
+Example: If your website is about recipes, you could write:
+<title>Delicious Recipes by Keshav</title>
+Where is it visible?
+In the browser tab (top of the window).
+In search engine results (like Google).
+-->
+
+<!--
+6. <link rel="stylesheet" href="style.css">
+'rel' means the relationship between the current document and the linked resource.
+This connects an external CSS file (style.css) to the HTML page.
+CSS (Cascading Style Sheets) controls the design (colors, fonts, layout, etc.).
+Example: If style.css contains:
+body {
+    background-color: lightblue;
+}
+Your webpage background will turn light blue.
+-->
+
+<!--
+Summary
+This <head> section: 
+✅ Ensures the text is displayed correctly.
+✅ Makes the page responsive.
+✅ Helps with search engine ranking.
+✅ Sets the page title.
+✅ Links to external styles for a better look.
+-->
+
+<body>
+    <h1>Heading h1</h1>
+    <h2>Heading h2</h2>
+    <h3>Heading h3</h3>
+    <h4>Heading h4</h4>
+    <h5>Heading h5</h5>
+    <h6>Heading h6</h6>
+
+    <!-- lorem(value) generates random (value) words. e.x. lorem25 -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptates beatae officiis tempora libero sequi
+        a praesentium autem quo soluta vitae, maiores voluptas consequuntur porro!</p>
+
+    <!-- This is called inline CSS -->
+    <p style="background-color:teal; color: black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+        ipsum laborum
+        laudantium dolorem tenetur vel magnam ex nulla deserunt eum sequi eveniet sunt ullam quasi laboriosam doloribus
+        aut. Fugit, repellendus!</p>
+
+    <h6>.*</h6>
+    <h5>.*.*</h5>
+    <h4>.*.*.*</h4>
+    <h3>.*.*.*.*</h3>
+    <h2>.*.*.*.*.*</h2>
+    <h1>.*.*.*.*.*.*</h1>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

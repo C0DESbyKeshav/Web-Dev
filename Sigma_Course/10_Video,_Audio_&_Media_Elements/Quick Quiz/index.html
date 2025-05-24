@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Quick Quiz: Create a website which shows videos and audios of different categories. -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <h1>
+            <li type="A">COMEDY</li>
+        </h1>
+        <div><video src="comedy.mp4" poster="poster.png" height="500" controls></video></div>
+        <div><audio src="comedy.mp3" controls preload muted></audio></div>
+
+        <h1>
+            <li type="A">DANCE</li>
+        </h1>
+        <div><video src="dancing.mp4" poster="poster.png" height="300" width="600" controls></video></div>
+        <div><audio src="dancing.mp3" controls preload muted></audio></div>
+
+        <h1>
+            <li type="A">KAWAII</li>
+
+        </h1>
+        <div><video src="cute.mp4" poster="poster.png" height="600" width="700" controls></video></div>
+        <div><audio src="cute.mp3" controls preload muted></audio></div>
+
+        <h1>
+            <li type="A">MOTIVATIONAL</li>
+        </h1>
+        <div><video src="motivational.mp4" poster="poster.png" height="600" width="600" controls></video></div>
+        <div><audio src="motivational.mp3" controls preload muted></audio></div>
+
+        <h1>
+            <li type="A">Anime Iconic Song</li>
+        </h1>
+        <div><iframe width="450" height="250" src="https://www.youtube.com/embed/T_qTnx0EKdw"
+                title="Seishun Buta Yarou ED1  - 『 Fukashigi No Karte 』[ Sakurajima Mai ] VER. With Lyrics"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+        <!-- Learned one thing: .gif file doesnt works for video -->
+        <!-- One more thing: Some YT creators disable the embedding of their video to any external sites, so when embedded it will show "Video Not Available" -->
+    </ol>
+</body>
+
+</html>
