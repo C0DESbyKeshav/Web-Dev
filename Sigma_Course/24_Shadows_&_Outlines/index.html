@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+    <style>
+        div {
+            background-color: rgb(255, 152, 219);
+            border: 1px solid black;
+            border-radius: 50px;
+            padding: 35px;
+            text-align: center;
+            font-size: 50px;
+            box-sizing: border-box;
+            margin:40vh;
+            width: 50vw;
+
+            box-shadow: 5px 15px 5px #f72d2d;
+            text-shadow: 4px 4px 4px #888888;
+            outline: 5px solid aquamarine;
+            /* outline will automatically follow the border radius */
+            outline-offset: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- * Box Shadows
+    box-shadow is a popular CSS property that enables designers to add shadow effects around an element's frame.
+    It can be used to give any element, be it a div, image, or button, a 3D feel or to emphasize on hover.
+    
+    box-shadow: h-offset v-offset blur spread color inset;
+    h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+    blur: The larger the value, the blurrier the shadow.
+    spread: Expands or shrinks the shadow size.
+    color: Defines the shadow color.
+    inset: Makes the shadow inner. -->
+
+    <!-- * Text Shadows
+    text-shadow is utilized to give shadows specifically to the text.
+    It can elevate the readability of the text or give it an elegant appearance.
+    
+    The Syntax for Text-Shadows is as follows:
+    text-shadow: h-offset v-offset blur color; -->
+
+    <!-- * Differences between Outlines and Borders:
+    While both can visually appear similar, outlines differ from borders in a few ways:
+
+    Position: Outlines don't take up space; they're drawn around the element, outside of any border.
+    Offset: Using the outline-offset property, you can set the space between an outline and the edge or border of an element.
+    Width: Borders can have varying widths on different sides, outlines have a uniform width.
+    Rounded Corners: Borders can have rounded corners using border-radius, while outlines generally cannot. -->
+
+    <div>I'm so in love with YOUUUUUUUUU 💓</div>
+</body>
+
+</html>

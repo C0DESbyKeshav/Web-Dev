@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A webpage talking about all the sizing units in CSS">
+    <title>CSS sizing units</title>
+    <style>
+        /* Type "ridhima" for commenting inside the style tag */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            /* This is the root element */
+            font-size: 10px;
+        }
+
+        .box {
+            background-color: aquamarine;
+            box-sizing: border-box;
+            border: 5px solid grey;
+            padding: 25px;
+            /* margin: 50px; */
+            margin: 20px auto;
+            /* This means that the margin of box will automatically be aligned in the center. This only works on the block elements and not on the inline ones. Here, it's working because box is a class of an element div which is a block element */
+            /* width: 1920;     This is for the HD Monitor Resolution full screen width */
+            width: 80vw;
+            /* vw for width, vh for height. This will take the width of the screen according to the viewport size of the screen, it is adjustable depending on the size of the monitor */
+
+            font-size: 2rem;
+            /* This sets the font size to twice the size of font than in the html element. */
+        }
+
+        .container {
+            background-color: pink;
+            box-sizing: border-box;
+            border: 5px solid red;
+            padding: 25px;
+            /* margin: 50px; */
+            margin: 20px auto;
+            /* This means that the margin of box will automatically be aligned in the center. 35px is for top and bottom whereas, auto is for the left and right. This only works on the block elements and not on the inline ones. Here, it's working because box is a class of an element div which is a block element */
+            /* width: 1920;     This is for the HD Monitor Resolution full screen width */
+            width: 80vw;
+            /* vw for width, vh for height. This will take the width of the screen according to the viewport size of the screen, it is adjustable depending on the size of the monitor */
+            height: 20vh;
+            /* This means that the second box will cover the 20% height of the screen regardless of the device. */
+        }
+
+        .container p {
+            font-size: 2em;
+            /* This sets the font size to twice the size of that in the container class which inherits its font size from div element. */
+        }
+
+        .container2 {
+            background-color: bisque;
+            margin: 20px auto;
+            box-sizing: border-box;
+            border: 5px solid pink;
+            padding: 25px;
+            font-size: 4vh;
+            /* Here, font size will be 3% of that of the total viewport height of the screen */
+            width: 100vmin;
+            /* vmin is equivalent to vh for desktop screen because the height is minimum here.
+            So the above thing line means that the width of the third box will be 100% of the height of the screen i.e. 1080px. */
+        }
+
+        div {
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- The sizing units covered in this program is more than enough for creating websites.
+    There's absolutely no reason to all the sizing units.
+    But still if you want to, then check out this site for the comprehensive list of all the sizing units: 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
+
+    <div class="box">
+        Your smile makes my day 🤗
+    </div>
+
+    <div class="container">
+        <p>
+            😍 Anata wa totemo kawaii desu !! 😍
+        </p>
+    </div>
+
+    <div class="container2">
+        ❣️ Daii sukii !!
+    </div>
+
+    <img src="kawaii.png" alt="You are so cute !!" width="400" align="right">
+
+    <!-- pixel is 196th of an inch 
+    In phone, vmin is the width because in phone the width < height
+    In desktop, vmin is the height because in desktop the height < width -->
+
+    <!-- * max-height: 80vh
+    This means the box will always take the viewport height of 80% of the total heigth of the screen. -->
+
+    <!-- * Percentage units
+    width:50% 
+    This element will be set to the 50% width to that of its parent element. 
+    This does'nt works everywhere because it should have a parent element to inherit the size. -->
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            margin: 50px;
+            padding: 35px;
+            width:500px;
+
+            display: inline-block;
+            /* Due to this display property set to inline, the div element which is supposed to be a block element, has been customized to behave as an inline element.
+            By setting this, the top margin, border, padding, the ordinary width, etc... applied to the element automatically disappears.
+            Due solve this issue, the "inline" value is replaced by "inline-block" */
+        }
+
+        .box1{
+            background-color: bisque;
+            /* display:none; */
+            /* By applying this, the first box disappears completely leaving no space behind as like it never existed. */
+
+            /* visibility:hidden; */
+            /* By setting the visibility value to hidden, the first box disappears but the space occupied by it still remains, nothing just blank space. */
+        }
+
+        .box2{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- More about this topic:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+
+    <div class="box box1">I am a</div>
+    <div class="box box2">box</div>
+
+    <span>single</span>
+    <span>line</span>
+</body>
+
+</html>

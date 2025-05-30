@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists in CSS</title>
+    <style>
+        nav ul li {
+            background-color: aquamarine;
+            /* Agar sirf normally hi humne lists ko bg color de diya toh sirf text pe color lagega and not including the markers.
+            To solve this issue i.e. to also include the markers to get the bg color: */
+            list-style-position: inside;
+            border: 2px solid black;
+            
+            font-size: 35px;
+            
+            list-style: katakana;
+            /* We can also set the marker style type to any other type of foreign characters or digits. */
+            list-style-type: "💖";
+            /* We can also set the marker style type to emoji. */
+            /* list-style-image: url("mua-kiss.gif"); */
+            /* We can also set the marker style type to any image or gif. */
+            
+            list-style: disc inside url("mua-kiss.gif");
+            /* We can also set all of the above properties in a single line.
+            Here, the gif will overwrite the disc.
+            The above line is just an example.
+            It is obvious that you will only use either of them at a time. */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Manga</li>
+            <li>Anime</li>
+            <li>Songs </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

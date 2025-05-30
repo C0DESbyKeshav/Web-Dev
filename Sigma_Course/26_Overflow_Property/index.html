@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            margin: 20px;
+            width: 30vw;
+            height: 10vh;
+        }
+
+        .box1 {
+            overflow: scroll;
+            /* This will give us a vertical scroll bar so that we can see the entire content.
+            Both horizontal and vertical scroll bar aayega hi regardless of the size of the content. */
+        }
+
+        .box2 {
+            overflow: auto;
+            /* Agar text overflow hua box ke bahar then give it a scroll bar or else don't. */
+        }
+
+        .box3 {
+            overflow: auto;
+            /* Agar text overflow hua box ke bahar then give it a scroll bar or else don't. */
+
+            white-space: nowrap;
+            /* Yeh karne se poora sentence sirf 1 horizontal line mein aa jaayega with only horizontal scroll bar.
+            No sentences on new line. */
+        }
+
+        .box4 {
+            white-space: nowrap;
+
+            overflow: hidden;
+            /* Overflowed text characters will get hidden.
+            Poora text read nahi kar sakte.
+            No scroll bar. */
+
+            text-overflow: ellipsis;
+            /* text-overflow ko ellipsis pe set karne se, baaki ke text characters jo overflow:hidden ke wajah se hide ho gaye hai, yeh dikhane ke liye ki aagey bhi texts aur hai but dikh nahi rahe: dots aa jaate hai.
+            Jitne bhi texts jo hide ho chuke hai usko REPLACE karke dots aa jaate hai. */
+        }
+
+        .box5 {
+            white-space: nowrap;
+
+            overflow: clip;
+            /* This also works same as the hidden value but clip use karne se scroll bar programmatically hi hatt jaata hai i.e we can set scroll bar on hidden but not when setting the value to clip. */
+        }
+
+        .box6 {
+            /* We can also set the overflow properties individually. */
+            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* Ab agar x mein overflow hua toh hide ho jaayega rest ke characters.
+            Aur agar y mein overflow hua toh scroll bar aa jaayega. */
+
+            /* Yeh same thing hum single line mein bhi kar sakte hai. */
+            overflow: hidden scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi natus, cupiditate sapiente laudantium doloribus
+        dicta! Inventore itaque delectus vitae aliquid optio eveniet non magni perferendis ipsum laboriosam atque
+        quaerat officia corrupti cumque nemo unde, voluptates qui a laudantium doloribus animi nulla? Impedit porro,
+        eius fugit reprehenderit illo officiis natus vel. Impedit dolore ipsam exercitationem dolor voluptatem pariatur
+        quia repellendus modi vitae, ad deleniti commodi, numquam eos vero fugit quibusdam officia sunt eius sed. Ad,
+        ratione. Mollitia ducimus, optio ex laboriosam molestiae, debitis modi adipisci quod saepe porro in rem
+        inventore? Sed incidunt nemo non reiciendis soluta cumque temporibus ex aliquam.
+    </div>
+
+    <div class="box box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur laborum vitae ratione minus.
+        Ullam quis quae dolore praesentium vero dicta, et fuga officia? Eum, laudantium.</div>
+
+    <div class="box box3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat velit minus odio atque
+        ipsam quis deleniti maiores natus, eius quia quaerat nam! Aliquam fuga saepe, deleniti libero dicta odio
+        quibusdam eius unde dignissimos dolor nesciunt ad odit officia amet cumque sapiente doloremque harum! Recusandae
+        laboriosam quo consequatur consequuntur nihil vel repellendus adipisci ipsa, impedit numquam, eum fugit
+        assumenda illo voluptatibus provident fuga esse placeat magnam ea culpa suscipit? Assumenda debitis totam ipsa
+        quidem expedita repellat reiciendis fugit placeat corrupti? Explicabo tempora maiores dolorem id animi quod,
+        temporibus quidem eos error accusantium voluptatem? Blanditiis autem hic sapiente temporibus a excepturi iusto.
+    </div>
+
+    <div class="box box4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam a est illo, aliquam qui,
+        incidunt natus ab asperiores, eveniet aliquid deserunt tempore repudiandae minima nemo in amet voluptates
+        cumque. Error blanditiis dolore veniam? Ipsum dignissimos sit tempore illum quaerat, error a, fugit, officia
+        ipsam laborum quo fuga at mollitia voluptatem quas! Nostrum quisquam aspernatur quas expedita incidunt fugiat
+        distinctio eveniet eius sapiente, quidem velit error eum commodi fugit inventore, perspiciatis ut consequatur
+        fuga ab quae. Quisquam consequatur, impedit officia provident in nihil dicta illo totam pariatur asperiores
+        voluptatibus aliquam sint molestias ab repellat, sunt rerum. Molestias provident quibusdam porro nesciunt?</div>
+
+    <div class="box box5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente aut molestiae
+        tempore et qui debitis iure architecto maiores omnis accusantium, nostrum laboriosam ad veritatis quisquam,
+        voluptas delectus voluptatibus culpa vero dolor aliquam velit iusto. Tempore vel quis tenetur exercitationem
+        molestias quam consectetur perspiciatis, magnam praesentium esse similique, error consequuntur. Voluptatem natus
+        ducimus, magnam esse ex adipisci fuga perferendis blanditiis dolor odit obcaecati expedita veritatis modi atque
+        deserunt maxime a voluptatum fugit facere ab minima harum ipsa laudantium ea? Numquam odit tempora et laborum
+        exercitationem reiciendis cupiditate a ipsam. Soluta aliquam numquam hic ratione laudantium deleniti amet ab,
+        fugit dicta.</div>
+
+    <div class="box box6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente aut molestiae
+        tempore et qui debitis iure architecto maiores omnis accusantium, nostrum laboriosam ad veritatis quisquam,
+        voluptas delectus voluptatibus culpa vero dolor aliquam velit iusto. Tempore vel quis tenetur exercitationem
+        molestias quam consectetur perspiciatis, magnam praesentium esse similique, error consequuntur. Voluptatem natus
+        ducimus, magnam esse ex adipisci fuga perferendis blanditiis dolor odit obcaecati expedita veritatis modi atque
+        deserunt maxime a voluptatum fugit facere ab minima harum ipsa laudantium ea? Numquam odit tempora et laborum
+        exercitationem reiciendis cupiditate a ipsam. Soluta aliquam numquam hic ratione laudantium deleniti amet ab,
+        fugit dicta.</div>
+</body>
+
+</html>
