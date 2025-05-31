@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Color Nav Bar</title>
+    <style>
+        :root {
+            --bgcolor: steelblue;
+            --mar: 25px 60px;
+            --navBGcolor: purple;
+            --hoverBGcolor: rgb(145, 0, 145)
+        }
+
+        body {
+            background-color: var(--bgcolor);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            background-color: var(--navBGcolor);
+        }
+
+        li {
+            list-style: none;
+            margin: var(--mar);
+            font-size: 35px;
+            background-color: var(--navBGcolor);
+        }
+
+        .red {
+            color: pink;
+        }
+
+        li:hover {
+            cursor: pointer;
+            color: magenta;
+            background-color: var(--hoverBGcolor);
+        }
+
+        .red:hover {
+            cursor: pointer;
+            color: red;
+            background-color: var(--hoverBGcolor);
+        }
+
+        .question {
+            color: cyan;
+            font-size: 20px;
+            margin: var(--mar);
+            font-weight: 500;
+            font-size: 30px;
+        }
+
+        .box {
+            text-indent: 60px;
+            margin: 60px 60px;
+            font-size: 40px;
+            background-color: rgb(65, 121, 167);
+            box-shadow: 5px 8px 5px rgb(52, 96, 132);
+            padding: 15px;
+        }
+
+        .box1 {
+            color: peachpuff;
+        }
+        
+        .box2 {
+            color:aliceblue;
+        }
+        
+        .box3 {
+            color: aquamarine;
+        }
+
+        .box4 {
+            color: bisque;
+        }
+
+        .box5 {
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li>Body</li>
+            <li>Face</li>
+            <li class="red">Heart</li>
+            <li>Nature</li>
+            <li>Skills</li>
+        </ul>
+    </div>
+    <div>
+        <p class="question">What do you like about me 🫠</p>
+        <div class="box box1">
+            <p>To make you fall in love 💘</p>
+            <p>I tried making you laugh 😁</p>
+            <p>And everytime you laugh 💫</p>
+            <p>I am the one who falls in love ❤️‍🩹</p>
+        </div>
+        <div class="box box2">
+            <p>Maine chaha tujhe meri khata nahi ☺️</p>
+            <p>Meri khata hai ki tujhe pata nahi 🤕</p>
+        </div>
+        <div class="box box3">
+            <p>I can fight a hundred man who wanted you 💪</p>
+            <p>But not the man who You wanted 🤧</p>
+        </div>
+        <div class="box box4">
+            <p>If you could go anywhere in the world, where would you go 🤔</p>
+            <p>- Where are you 😉 ?</p>
+        </div>
+        <div class="box box5">
+            <p>I once loved a flower so much that instead of picking it 🥀,</p>
+            <p>I left it alone 😞</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -6,25 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS_Variables</title>
     <style>
+        :root {
+            /* The :root {} selector in CSS refers to the top-level element of the document, which is usually the <html> element in an HTML document. */
+            /* The global variables are declared in this root selector */
+            --navBGcolor: pink;
+            --loremBGcolor: peachpuff;
+            --nav-pad: 50px;
+            --navOp: 0.5;
+        }
+
         * {
             margin: 0;
             padding: 0;
         }
 
         .nav {
-            background-color: green;
+            background-color: var(--navBGcolor);
         }
 
-        ul{
-            display:flex;
+        ul {
+            display: flex;
         }
 
-        ul li{
+        ul li {
             list-style: none;
+            padding: var(--nav-pad);
+            border: 10px solid var(--loremBGcolor);
+            opacity: var(--navOp);
         }
 
-        .container{
-            background-color: greenyellow;
+        ul li:first-child {
+            --loremBGcolor: orange;
+            background-color: var(--loremBGcolor, yellow);
+            /* Here, the orange color is the fallback value i.e. if the variable loremBGcolor is not found then the orange color will be set. */
+
+            --navBorderColor: peachpuff;
+            border: 10px solid var(--navBorderColor);
+        }
+
+        .container {
+            background-color: var(--loremBGcolor)
         }
     </style>
 </head>
