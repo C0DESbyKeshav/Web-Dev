@@ -24,6 +24,7 @@
         }
 
         .nav-bar {
+            background-color: var(--navBGcolor);
             position: sticky;
             top: 0;
             z-index: 10;
@@ -32,14 +33,14 @@
 
         ul {
             display: flex;
-            background-color: var(--navBGcolor);
+            flex-wrap: wrap;
         }
 
         li {
             list-style: none;
             margin: var(--mar);
             font-size: 35px;
-            background-color: var(--navBGcolor);
+            /* background-color: var(--navBGcolor); */
         }
 
         .red {
@@ -107,6 +108,7 @@
             <li>Skills</li>
         </ul>
     </div>
+
     <div>
         <p class="question">What do you like about me 🫠</p>
         <div class="box box1">
