@@ -33,6 +33,7 @@
             top: 0;
             z-index: 10;
             /* NOTE: sticky property won't work properly without the above three properties and also won't work if it's not declared inside the style of a root element (i.e. it should'nt be a child of any other element. */
+            /* NOTE: same for fixed property */
         }
 
         ul {
@@ -66,12 +67,14 @@
             /* border:var(--test); */
             margin: 0.625rem;
             padding-left: 13%;
+            position: relative;
+            z-index: 1;
         }
 
         .greet {
             position: fixed;
-            z-index: 1;
-            margin-left: 9rem;
+            z-index: 0;
+            margin-left: 22rem;
             color: white;
             font-size: 10vmax;
             font-weight: 800;
@@ -107,8 +110,6 @@
             border-radius: .3125rem;
             border: 1px solid rgb(41, 93, 135);
             box-shadow: 0rem .375rem .3125rem steelblue;
-            position: relative;
-            z-index: 2;
         }
 
 
@@ -119,6 +120,7 @@
             background-color: steelblue;
             border-radius: 3.125rem;
             position: relative;
+            z-index: -1;
         }
 
         .icon {
@@ -131,6 +133,7 @@
             height: 4.375rem;
             border-radius: 50%;
             position: fixed;
+            z-index: 10;
             right: 0.625rem;
             bottom: 0.625rem;
             box-shadow: 0.125rem 0.3125rem 0.125rem grey;
@@ -211,8 +214,8 @@
     </header>
 
     <main>
+        <div class="greet">WELCOME</div>
         <div class="boxes">
-            <div class="greet">WELCOME</div>
             <div class="box"><img src="https://i.postimg.cc/wBwPm2SM/takagi-san.jpg" alt="Takagi-san as her"></div>
             <div class="box"><img src="https://i.postimg.cc/vmYkTk2C/nishikata.jpg" alt="Nishikata as me"></div>
         </div>
