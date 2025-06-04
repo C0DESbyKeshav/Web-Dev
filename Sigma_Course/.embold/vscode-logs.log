@@ -366,3 +366,146 @@ OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, shari
 2025-06-01 04:57:14 info: Row(s) deleted
 2025-06-01 04:58:22 info: Row(s) deleted
 2025-06-01 04:58:23 info: Row(s) deleted
+2025-06-01 12:38:28 info: Congratulations, your extension "Embold" is now active!
+2025-06-01 12:38:28 info: ************* init ****************
+2025-06-01 12:38:28 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-01 12:38:34 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-01 12:38:34 info: Extension installed on machine OS : win32
+2025-06-01 12:38:34 info: Fetched the issues from DB
+2025-06-01 12:38:34 info: Java version installed on machine : 
+openjdk version "21.0.6" 2025-01-21 LTS
+OpenJDK Runtime Environment Temurin-21.0.6+7 (build 21.0.6+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, sharing)
+
+2025-06-01 12:38:34 info: Java installed on machine.
+2025-06-01 12:38:37 info: Embold extension version response:{"hasSupport":false,"version":"0.2.1","changeNotes":"<div> <p>Release Date: 30 Apr, 2025 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-06-01 12:38:37 info: Current installed embold extension version : 0.3.0
+2025-06-01 12:38:37 info: Latest embold extension version on marketplace : 0.2.1
+2025-06-01 12:38:37 info: Current extension version: 0.3.0
+2025-06-01 12:38:37 info: Stored extension version: 0.3.0
+2025-06-01 12:38:37 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-06-01 13:44:49 info: Row(s) deleted
+2025-06-01 13:44:50 info: Row(s) deleted
+2025-06-01 21:07:35 info: Row(s) deleted
+2025-06-01 21:07:36 info: Row(s) deleted
+2025-06-01 21:44:14 info: Row(s) deleted
+2025-06-02 00:14:16 info: Row(s) deleted
+2025-06-02 00:14:16 info: Row(s) deleted
+2025-06-02 11:37:23 info: Congratulations, your extension "Embold" is now active!
+2025-06-02 11:37:23 info: ************* init ****************
+2025-06-02 11:37:23 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-02 11:37:27 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-02 11:37:27 info: Extension installed on machine OS : win32
+2025-06-02 11:37:27 info: Fetched the issues from DB
+2025-06-02 11:37:27 info: Java version installed on machine : 
+openjdk version "21.0.6" 2025-01-21 LTS
+OpenJDK Runtime Environment Temurin-21.0.6+7 (build 21.0.6+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, sharing)
+
+2025-06-02 11:37:27 info: Java installed on machine.
+2025-06-02 11:37:39 info: Embold extension version response:{"hasSupport":false,"version":"0.2.1","changeNotes":"<div> <p>Release Date: 30 Apr, 2025 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-06-02 11:37:39 info: Current installed embold extension version : 0.3.0
+2025-06-02 11:37:39 info: Latest embold extension version on marketplace : 0.2.1
+2025-06-02 11:37:39 info: Current extension version: 0.3.0
+2025-06-02 11:37:39 info: Stored extension version: 0.3.0
+2025-06-02 11:37:39 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-06-02 12:58:47 info: Row(s) deleted
+2025-06-02 12:59:17 info: Row(s) deleted
+2025-06-02 14:50:46 info: Row(s) deleted
+2025-06-03 13:38:31 info: Congratulations, your extension "Embold" is now active!
+2025-06-03 13:38:31 info: ************* init ****************
+2025-06-03 13:38:31 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-03 13:38:38 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-03 13:38:38 info: Extension installed on machine OS : win32
+2025-06-03 13:38:38 info: Fetched the issues from DB
+2025-06-03 13:38:38 info: Java version installed on machine : 
+openjdk version "21.0.6" 2025-01-21 LTS
+OpenJDK Runtime Environment Temurin-21.0.6+7 (build 21.0.6+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, sharing)
+
+2025-06-03 13:38:38 info: Java installed on machine.
+2025-06-03 13:38:42 info: Embold extension version response:{"hasSupport":false,"version":"0.2.1","changeNotes":"<div> <p>Release Date: 30 Apr, 2025 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-06-03 13:38:42 info: Current installed embold extension version : 0.3.0
+2025-06-03 13:38:42 info: Latest embold extension version on marketplace : 0.2.1
+2025-06-03 13:38:42 info: Current extension version: 0.3.0
+2025-06-03 13:38:42 info: Stored extension version: 0.3.0
+2025-06-03 13:38:42 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-06-03 14:19:52 info: Row(s) deleted
+2025-06-03 14:20:37 info: Row(s) deleted
+2025-06-03 14:20:47 info: Row(s) deleted
+2025-06-03 15:37:11 info: Row(s) deleted
+2025-06-03 16:18:42 info: Row(s) deleted
+2025-06-03 16:18:43 info: Row(s) deleted
+2025-06-03 16:21:01 info: Row(s) deleted
+2025-06-03 16:27:19 info: Row(s) deleted
+2025-06-03 18:30:25 info: Row(s) deleted
+2025-06-03 18:30:26 info: Row(s) deleted
+2025-06-03 18:30:45 info: Row(s) deleted
+2025-06-03 18:31:02 info: Row(s) deleted
+2025-06-03 18:32:10 info: Row(s) deleted
+2025-06-03 20:18:24 info: Row(s) deleted
+2025-06-04 11:19:49 info: Congratulations, your extension "Embold" is now active!
+2025-06-04 11:19:49 info: ************* init ****************
+2025-06-04 11:19:49 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-04 11:20:00 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-04 11:20:00 info: Extension installed on machine OS : win32
+2025-06-04 11:20:00 info: Fetched the issues from DB
+2025-06-04 11:20:01 info: Java version installed on machine : 
+openjdk version "21.0.6" 2025-01-21 LTS
+OpenJDK Runtime Environment Temurin-21.0.6+7 (build 21.0.6+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, sharing)
+
+2025-06-04 11:20:01 info: Java installed on machine.
+2025-06-04 11:21:30 error: request to https://v1.embold.io/api/plugins failed, reason: read ECONNRESET
+2025-06-04 11:21:30 info: Current installed embold extension version : 0.3.0
+2025-06-04 11:21:30 info: Latest embold extension version on marketplace : 0.2.1
+2025-06-04 11:21:30 info: Current extension version: 0.3.0
+2025-06-04 11:21:30 info: Stored extension version: 0.3.0
+2025-06-04 11:21:30 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-06-04 11:39:20 info: Row(s) deleted
+2025-06-04 11:39:27 info: Row(s) deleted
+2025-06-04 11:39:44 info: Row(s) deleted
+2025-06-04 11:39:49 info: Row(s) deleted
+2025-06-04 11:40:01 info: Row(s) deleted
+2025-06-04 11:40:10 info: Row(s) deleted
+2025-06-04 11:40:16 info: Row(s) deleted
+2025-06-04 11:40:23 info: Row(s) deleted
+2025-06-04 11:41:17 info: Row(s) deleted
+2025-06-04 11:41:22 info: Row(s) deleted
+2025-06-04 11:41:25 info: Row(s) deleted
+2025-06-04 11:41:31 info: Row(s) deleted
+2025-06-04 11:41:35 info: Row(s) deleted
+2025-06-04 11:41:42 info: Row(s) deleted
+2025-06-04 11:41:45 info: Row(s) deleted
+2025-06-04 11:41:52 info: Row(s) deleted
+2025-06-04 11:41:56 info: Row(s) deleted
+2025-06-04 11:41:59 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 13:44:19 info: Row(s) deleted
+2025-06-04 18:40:23 info: Row(s) deleted
+2025-06-04 18:40:24 info: Row(s) deleted
+2025-06-04 18:41:16 info: Row(s) deleted
+2025-06-04 18:43:58 info: Row(s) deleted
+2025-06-04 18:48:54 info: Row(s) deleted
+2025-06-04 18:48:55 info: Row(s) deleted
+2025-06-04 19:24:59 info: Row(s) deleted
+2025-06-04 19:25:00 info: Row(s) deleted

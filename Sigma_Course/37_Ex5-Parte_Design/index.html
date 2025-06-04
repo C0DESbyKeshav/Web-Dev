@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design for Parte</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --theme: skyblue;
+            --secondary: navy;
+            --tertiary: peachpuff;
+            --test: .0625rem solid black;
+            --foot: rgb(0, 110, 255);
+        }
+
+        body {
+            background-color: var(--theme);
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            /* NOTE: sticky property won't work properly without the above three properties and also won't work if it's not declared inside the style of a root element (i.e. it should'nt be a child of any other element. */
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--secondary);
+            box-shadow: 0rem 0.3125rem 0.3125rem steelblue;
+        }
+
+        ul li {
+            list-style: none;
+            margin: 1.25rem;
+            margin-right: 2.5rem;
+            font-size: 1.5rem;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: var(--tertiary);
+        }
+
+        a:hover {
+            color: teal;
+            cursor: pointer;
+        }
+
+        .boxes {
+            background-color: rgb(103, 175, 212);
+            display: flex;
+            flex-wrap: wrap;
+            /* border:var(--test); */
+            margin: 0.625rem;
+            padding-left: 13%;
+        }
+
+        .greet {
+            position: fixed;
+            z-index: 1;
+            margin-left: 9rem;
+            color: white;
+            font-size: 10vmax;
+            font-weight: 800;
+            text-shadow: 0px 5px 0px grey;
+            word-break: break-word;
+        }
+
+        @media (max-width: 768px) {
+            .greet {
+                font-size: 5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .greet {
+                font-size: 3rem;
+            }
+        }
+
+
+        .box {
+            background-color: rgb(41, 93, 135);
+            /* border: var(--test); */
+            margin: 1.875rem;
+            padding: 2.1875rem;
+            width: 31.25rem;
+            height: 34.375rem;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            border-radius: .3125rem;
+            border: 1px solid rgb(41, 93, 135);
+            box-shadow: 0rem .375rem .3125rem steelblue;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .center-box {
+            /* border: var(--test); */
+            margin: 1.875rem 12.5rem;
+            height: 15.625rem;
+            background-color: steelblue;
+            border-radius: 3.125rem;
+            position: relative;
+        }
+
+        .icon {
+            width: 2.1875rem;
+            border-radius: 0.3125rem;
+        }
+
+        .logo img {
+            width: 4.375rem;
+            height: 4.375rem;
+            border-radius: 50%;
+            position: fixed;
+            right: 0.625rem;
+            bottom: 0.625rem;
+            box-shadow: 0.125rem 0.3125rem 0.125rem grey;
+        }
+
+        footer {
+            /* border: var(--test); */
+            padding-bottom: 0rem;
+            margin-top: 6.25rem;
+            background-color: var(--foot);
+            color: var(--tertiary);
+        }
+
+        marquee img {
+            width: 0.9375rem;
+            border-radius: 0.9375rem;
+        }
+
+        marquee {
+            color: white;
+            font-size: 1.1rem;
+            padding-top: 0;
+            margin-top: 0;
+            text-wrap: wrap;
+        }
+
+        .check-this-out {
+            padding-top: 0;
+        }
+
+        .disclaimer {
+            padding: 3.125rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a target="_blank">
+                    <!-- <img class="icon" src="images/home.jpg"> -->
+                    <img class="icon" src="https://i.pinimg.com/736x/8d/56/d4/8d56d4662a4dd452ef01ea6079a2bc1c.jpg">
+                    Home</a>
+            </li>
+
+            <li>
+                <!-- <a target="_blank" href="/12_Ex1-Parte_Carvaan/index.html"> -->
+                <a target="_blank" href="https://carvaan-for-parte-2535.netlify.app/">
+                    <!-- <img class="icon" src="images/music.jpg">  -->
+                    <img class="icon" src="https://i.pinimg.com/736x/24/00/24/240024af57aea2ea8ac9549ad2fa7c05.jpg">
+                    Music</a>
+            </li>
+
+            <li>
+                <!-- <a target="_blank" href="/29_Ex3-Parte_Card/index.html"> -->
+                <a target="_blank" href="https://cards-for-parte-2535.netlify.app/">
+                    <!-- <img class="icon" src="images/cards.jpg">  -->
+                    <img class="icon" src="https://i.pinimg.com/736x/09/da/ed/09daed36430e713cc955a4eb284994d7.jpg">
+                    Message</a>
+            </li>
+
+            <li>
+                <!-- <a target="_blank" href="/33_Ex4-Navigating_Parte/index.html"> -->
+                <a target="_blank" href="https://shayari-for-parte-2535.netlify.app/">
+                    <!-- <img class="icon" src="images/shayari.jpg">  -->
+                    <img class="icon" src="https://i.pinimg.com/736x/0a/2d/90/0a2d901347c422c070777bc160c2477c.jpg">
+                    Shayari</a>
+            </li>
+
+            <li>
+                <!-- <a target="_blank" href="/34_Float_&_Clear/index.html"> -->
+                <a target="_blank" href="https://motivational-quotes-2535.netlify.app/">
+                    <!-- <img class="icon" src="images/motivation.jpg">  -->
+                    <img class="icon" src="https://i.pinimg.com/736x/a2/4a/55/a24a554973e8f4f8bc3a6bff4709002d.jpg">
+                    Motivation</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="boxes">
+            <div class="greet">WELCOME</div>
+            <div class="box"><img src="https://i.postimg.cc/wBwPm2SM/takagi-san.jpg" alt="Takagi-san as her"></div>
+            <div class="box"><img src="https://i.postimg.cc/vmYkTk2C/nishikata.jpg" alt="Nishikata as me"></div>
+        </div>
+        <div class="center-box"></div>
+    </main>
+
+    <div class="logo"><a target="_blank" href="index.html">
+            <!-- <img src="images/jr_logo.jpg" alt="logo"> -->
+            <!-- <img src="https://i.pinimg.com/736x/19/34/a7/1934a7d1e506be5d3574ac90b6f9f7d2.jpg" alt="logo"> -->
+
+
+            <!-- <img src="images/luffy_logo.jpg" alt="logo"> -->
+            <!-- <img src="https://i.pinimg.com/736x/19/34/a7/1934a7d1e506be5d3574ac90b6f9f7d2.jpg" alt="logo"> -->
+
+            <!-- <img src="images/chopper_logo.jpg" alt="logo"> -->
+            <img src="https://i.pinimg.com/736x/83/23/32/832332f2bb37484668d51a6a249acf44.jpg" alt="logo">
+        </a>
+    </div>
+
+    <div>
+        <!-- <audio src="songs/finding_her.mp3" autoplay loop></audio> -->
+        <audio src="https://koshalworld.com/files/download/id/51460" autoplay loop></audio>
+
+        <!-- <audio src="songs/humdum.mp3" autoplay loop></audio> -->
+        <!-- <audio src="https://pagalfree.com/musics/128-Humdum%20-%20Aditya%20Rikhari%20128%20Kbps.mp3" autoplay loop></audio> -->
+
+        <!-- <audio src="songs/bikhra.mp3" autoplay loop></audio> -->
+        <!-- <audio src="https://pagalworld.zone/stream.php?file=upload_file%2F53%2FBikhra.mp3" autoplay loop></audio> -->
+
+        <!-- <audio src="songs/ektarfa.mp3" autoplay loop></audio> -->
+        <!-- <audio src="https://koshalworld.com/files/download/id/15807" autoplay loop></audio> -->
+
+        <!-- <audio src="songs/hotline.mp3" autoplay loop></audio> -->
+        <!-- * The audio only playing when you click on nav links — is caused by modern browser autoplay policies, which block audio from playing automatically unless there's a user interaction. -->
+    </div>
+
+    <footer>
+        <div class="check-this-out">
+            <marquee behavior="alternate" direction="right" scrollamount="6">
+                <pre>Wait there 🤚 you still haven't explored the site completely    ||    Try clicking on the icons and logo 😉</pre>
+            </marquee>
+        </div>
+
+        <div class="disclaimer">
+            <p style="font-size:2rem;">CODES by Keshav</p>
+            <p>&copy; 2025 All rights reserved</p>
+            <p>Love like this isn't owned</p>
+            <p>Feel free to take a piece with you</p>
+            <p>This was mine, but if it made you feel - now it's ours</p>
+            <p>Made with ❤️ for ❤️</p>
+        </div>
+    </footer>
+</body>
+
+</html>

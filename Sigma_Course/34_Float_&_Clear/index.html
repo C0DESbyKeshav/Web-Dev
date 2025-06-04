@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Float and Clear</title>
     <style>
-        *{
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Dancing+Script:wght@400..700&family=Fredericka+the+Great&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            background-color: yellow;
+        }
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        .cards {
+            font-family: "Fredericka the Great", serif;
+            font-weight: 600;
+            font-style: normal;
+            color: black;
+            font-size: 25px;
+            margin: 25px;
+            padding: 25px;
+            border: 1px solid black;
+            display: flow-root;
+            /* By doing this, the image perfectly gets adjusted within the parent container preventing overflowing of image outside the parent container. */
+        }
+
+        div:nth-child(10) {
+            clear: right;
+            /* This says that if anything is floating on my right side then clear it and let me take my whole space by myself. */
+        }
+
+        img {
+            border-radius: 15px;
+
+            float: right;
+            /* By doing this the image will shift to the right side leaving space and will allow the texts to get displayed beside it just like in the old newspapers and articles. */
+
+            height: 500px;
+            /* By setting this much height, the image overflows from the container.
+            To resolve this issue we write the below line in the parent container. */
+            /* display: flow-root; */
+        }
     </style>
 </head>
+
 <body>
-    <div class="cards card"></div>
-    <div class="cards card"></div>
-    <div class="cards card"></div>
+    <div class="cards">
+        <img
+            src="https://imgs.search.brave.com/CvSIqe-y9WmIZS7DMQRvakHwPyNX80xp9DQmm3FuS1E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFiU0xJUXJ5V0wu/anBn">
+        <div class="card">As of you are now, you can't achieve a single damn thing.</div>
+        <div class="card">Only because you keep working hard doesn't mean you will get it.</div>
+        <div class="card">It's not about who is more talented its about who is more hungry.</div>
+        <div class="card">Every obstacle is a chance to prove yourself to show that you're not someone who settles.
+        </div>
+        <div class="card">Nothing changes until YOU do. Growth doesn't follow dates, it follows DECISIONS.</div>
+        <div class="card">I don't stop when I am tired, I stop when I am done!!</div>
+        <div class="card">Do you need a reason for NOT LOSING ?!!</div>
+        <div class="card">Everyone dies but not everyone lives.</div>
+        <div class="card">Rather than consuming, START CREATING!</div>
+        <div class="card">Kids who have never seen peace and kids who have never seen war have different values.</div>
+        <div class="card">Do today what others won't and achieve tomorrow what others can't.</div>
+        <div class="card">Do or Do Not, There is NO try.</div>
+        <div class="card">This is your life and it's ending one minute at a time.</div>
+    </div>
 </body>
+
 </html>

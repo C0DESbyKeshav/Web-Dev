@@ -1,0 +1,79 @@
+body {
+    /* Type Selector (Element Selector) */
+    background-color: yellow;
+}
+
+.boxes {
+    /* Class Selector */
+    font-size: 50px;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+.boxes * {
+    /* Universal Selector
+    If it is applied to any class then that means the below properties will be applied to all the elements present in the parent class.
+    Instead of setting the same property to the elements one by one, declaring the parent class as the universal selector for all the elements inside of it, is more efficient. */
+    border: 2px solid black;
+}
+
+.box:first-child {
+    /* Pseudo Element Selector: If the box class is the first element of it's parent class then apply this: */
+    background-color: black;
+    color: white
+}
+
+.box:nth-child(3)::first-line {
+    /* This means that apply the below properties to the first line of the third child of the parent child class boxes. */
+    color: red;
+}
+
+[data-color="last"] {
+    /* Attribute Selector */
+    color: blue;
+}
+
+p,
+a,
+.box,
+[data-color="last"] {
+    /* Group selector */
+    text-align: center;
+}
+
+.box:nth-child(even) {
+    /* Start from 1 */
+    font-size: 30px;
+}
+
+.box:nth-last-child(2) {
+    /* Last se 2nd child pe below properties apply ho jaayenge. */
+    text-align: left;
+}
+
+.boxes:before {
+    /* Inserts the below content before the boxes.
+    Similarly we can do for "after" */
+    content: "I never existed but now I am where it all starts";
+    font-weight: bolder;
+    font-size: 2rem;
+    color: green;
+}
+
+::selection {
+    /* Whenever any text is selected then apply the below changes. */
+    background-color: aqua;
+    color: navy;
+}
+
+.box::first-letter {
+    /* Jitne bhi box class hai unke sentences ek 1st word ke 1st letter ko below property de dega. */
+    color: peru;
+    font-size: 75px;
+}
+
+input::placeholder {
+    /* This says that set the below properties on the placeholder attribute under the input element. */
+    color: cyan;
+    background-color: black;
+}
