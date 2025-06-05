@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.container {
+    margin: 10px 20px 10px 10px;
+    border: 2px solid red;
+    height: 80vh;
+
+    display: flex;
+    /* Automatically aligns all the boxes from left to right. 
+    By default left to right. */
+
+    flex-direction: row-reverse;
+    /* If we set the flex-direction to row then that means the "Main axis" is in the X-axis direction horizontally and the "Cross axis" is in the Y-axis direction vertically. */
+    /* Mostly used: row, row-reverse, column, column-reverse */
+
+    justify-content: center;
+    /* To center align all the boxes horizontally. 
+    The different values for align-items:
+    normal, stretch, start, end, flex-start, flex-end, center, baseline, left, right, space-around, space-between, space-evenly, start, inherit, initial, revert, revert-layer, unset, etc */
+
+    align-items: center;
+    /* To center align all the boxes vertically.
+    Align items don't work on individual elements, they should be in a container.
+    The different values for align-items:
+    normal, stretch, start, end, flex-start, flex-end, center, baseline, left, right, space-around, space-between, space-evenly, start, inherit, initial, revert, revert-layer, unset, etc */
+
+    /* flex-wrap: wrap; */
+    /* Applies on all the containers.
+    Wraps the overflowing items to wrap down on the new line. */
+
+    /* align-content: center; */
+    /* To make all the contents align to the center of the container without any unnecessary newline gaps between them, we don't use align-items, we rather use align-content 
+    flex-wrap should be set to wrap for this to take effect. */
+
+    flex-flow: row nowrap;
+    /* flex-flow: <flex-direction> <flex-wrap>
+    Nothing different just rather than setting two properties on two different lines, we can set both of them in a single line. */
+
+    gap: 0px;
+    /* This will set the gap between the boxes and will be applied to the entire container. */
+    row-gap: 30px;
+    column-gap: 40px;
+    gap: 30px 40px;
+}
+
+.item {
+border: 2px solid black;
+background-color: peachpuff;
+height: 100px;
+width: 100px;
+/* margin: 10px; */
+
+/* flex-grow: 1; */
+/* Each item will take equal width to perfectly fit the entire width of the container. */
+}
+
+.item1{
+    /* flex-grow:2; */
+    /* The box item which will have set this property will take more width space then the rest of the boxes in that row.
+    More the value, more will be width of that box item. */
+
+    /* flex-shrink: 2; */
+    /* The box item which will have set this property will shrink when the screen size decreases until its size is half (because the value is set to 2)
+    This property only works when the flex-wrap is not there or is set to nowrap. */
+
+    align-self: flex-end;
+    /* This property won't work properly if the align-content is there. */
+}
+
+/* Order sets the preference order of a specific item.
+By default, the order is 0 so, any item with order > 0 will keep aranging itself to the end of all the items according to the alloted orders. */
+.order-1{
+    order: 1;
+}
+
+.order-2{
+    order: 2;
+}
+
+.order-3{
+    order: 3;
+}
