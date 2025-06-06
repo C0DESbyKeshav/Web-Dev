@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: yellow;
+        }
+
+        .container {
+            margin: 50px;
+            border: 2px solid black;
+            background-color: grey;
+            height: 80vh;
+            width: 80vw;
+            display: grid;
+            /* Saare boxes vertically arrange ho jaayenge with equal gaps to fit the container. */
+
+            /* grid-template-columns: [col-1] 120px [col-2] 80px; */
+            /* Two columns will be created of the above width respectively and height that of the container.
+    To understand this, inspect the webpage and try changing the values. */
+            /* We can also set the names of the column lines and the same can be done for the rows. */
+
+            /* grid-template-rows: 100px 100px 100px; */
+            /* Will give the row height to all the boxes in the container because there are only 3 rows in our container. 
+    To understand this, inspect the webpage and try changing the values. */
+
+            /* * If we set either of the row or column size, the another will get set automatically. */
+
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* Column of each box will take a fraction of width of the total width */
+
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+            /* 2 columns of 1 fraction column width.
+            We can even use the minmax function to set the column width which says that the minimum width will be 100px and the maximum width will be 1fr. */
+
+            grid-template-columns: repeat(4, 40px);
+
+            gap: 50px 35px;
+            row-gap: 50px;
+            column-gap: 35px;
+
+            /* If we want to align something within cells */
+            justify-items: center;
+            align-items: center;
+            /* Grid ke respect mein center align karega horizontally and vertically respectively. */
+
+            /* Below both are only applicable if the container is big and the grid is small */
+            /* Container ke respect mein center align karega horizontally and vertically respectively. */
+            justify-content: center;
+            /* Horizontally */
+            align-content: center;
+            /* Vertically */
+
+            place-items: center;
+            /* By doing this, both the justify-items and align-items will come to center. */
+
+            place-content: center;
+            /* By doing this, both the justify-content and align-content will come to center. */
+        }
+
+        .item {
+            border: 1px solid black;
+            background-color: peachpuff;
+            height: 50px;
+            width: 50px;
+        }
+
+        .item-1 {
+            grid-row: 1/2;
+            /* Start from row-1 to row-2 */
+            /* OR */
+            /* grid-row-start: 1; */
+            /* grid-row-end: 2; */
+
+            grid-column: 1/2;
+            /* Start from column-1 to column-2 */
+            /* OR */
+            /* grid-column-start: 1; */
+            /* grid-column-end: 2; */
+            /* Now after setting up the column names, we can also write grid-row-start: col-1/col-2
+            Same can be done for rows. */
+
+            /* These index numbers will be visible when you inspect the webpage and activate the grid option. */
+        }
+
+        .item-2 {
+            /* align-self: end; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item">3</div>
+        <div class="item item-1">4</div>
+        <div class="item">5</div>
+        <!-- <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div> -->
+    </div>
+</body>
+
+</html>
