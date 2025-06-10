@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A replicate of UltraEdit website only using Flexbox">
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <!-- To add any image as icon we do the above thing. -->
+    <title>Download UltraEdit text editor for Windows</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+        :root {
+            --test: 1px solid black;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            /* font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal; */
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav {
+            /* border: var(--test); */
+            width: 100%;
+            top: 0;
+            padding: 21.5px 10vw 21.5px 10vw;
+            position: relative;
+            display: flex;
+        }
+
+        .logo-1 img {
+            width: 192px;
+            padding-left: 1px;
+        }
+
+        .logo-2 img {
+            width: 90px;
+            position: absolute;
+            top: 70px;
+            margin-left: 8.5vw;
+        }
+
+        @media only screen and (orientation: portrait) {
+            .logo-2 img {
+                margin-left: 8vh;
+            }
+        }
+
+        .logo a:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .explore {
+            color: rgb(55, 55, 55);
+            display: flex;
+            flex-flow: row nowrap;
+            column-gap: 29.99px;
+            font-size: 0.975rem;
+            font-weight: 480;
+            margin-left: 153px;
+            margin-top: 8px;
+            align-items: center;
+            position: relative;
+        }
+
+        .down-arrow {
+            padding-left: 7px;
+            margin-top: 4.8px;
+            width: 17.5px;
+            height: 12.5px;
+        }
+
+        .hover-nav {
+            padding-top: 17px;
+            padding-bottom: 33px;
+            display: flex;
+            text-wrap-mode: nowrap;
+        }
+
+        .hover-nav:hover {
+            color: grey;
+            cursor: pointer;
+        }
+
+        .hover-options,
+        .extra-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            color: white;
+            box-shadow: 0px 0px 5px rgb(35, 35, 35);
+            font-size: 1rem;
+            background-color: rgb(35, 35, 35);
+            width: 240px;
+            padding: 0px 15px 5px 7px;
+            z-index: 1;
+            text-wrap-mode: wrap;
+        }
+
+        .extra-options {
+            top: 0%;
+            left: 100%;
+        }
+
+        .select {
+            padding: 15px;
+            padding-right: 0px;
+            border-top: 1px solid rgb(52, 52, 52);
+            position: relative;
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+
+        .select:hover,
+        .buy:hover,
+        .language:hover,
+        .search:hover {
+            color: rgb(124, 124, 124);
+            cursor: pointer;
+        }
+
+        .hover-nav:hover .hover-options {
+            display: block;
+        }
+
+        .extra:hover .extra-options {
+            display: block;
+        }
+
+        .right-arrow {
+            position: absolute;
+            right: 40px;
+        }
+
+        .buy {
+            margin-left: 182px;
+            margin-top: 17px;
+            border: 2px solid black;
+            height: 39px;
+            display: flex;
+            padding: 7px 20px;
+            text-align: center;
+            font-weight: 650;
+            font-size: .9375rem;
+            border-radius: 3px;
+            text-wrap-mode: nowrap;
+        }
+
+        .globe {
+            width: 19.2px;
+            height: 19.2px;
+            margin-right: 7.5px;
+            margin-top: 2px;
+            margin-left: 27.4px;
+
+        }
+
+        .language {
+            display: flex;
+            margin-top: 24px;
+            margin-left: 0px;
+            color: rgb(55, 55, 55);
+        }
+
+        .search {
+            margin-top: 25px;
+            margin-left: 22px;
+        }
+
+        .upper-main,
+        .lower-main {
+            /* border: var(--test); */
+            margin: 0 15vw;
+        }
+
+        .head-title {
+            /* border: var(--test); */
+            display: flex;
+            justify-content: flex-start;
+            font-size: 47.5px;
+            margin-top: 44px;
+            margin-left: 106px;
+            font-weight: 400;
+            letter-spacing: 0.23px;
+        }
+
+        .head-title img {
+            margin-left: 13px;
+            margin-right: 10px;
+            margin-top: 20px;
+            width: 112px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        .head-subtitle {
+            margin-left: 70px;
+            margin-top: 39px;
+            margin-right: 40px;
+            font-size: 24px;
+            letter-spacing: 0px;
+            line-height: 31.2px;
+        }
+
+        .head-download {
+            /* border: var(--test); */
+            background-color: #00b6d1;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            display: block;
+            justify-content: flex-start;
+            margin-top: 33.8px;
+            margin-left: 384px;
+            width: 292px;
+            /* margin-right: 399px; */
+            padding: 14.4px 20px 15.2px 20px;
+            font-weight: 750;
+            font-size: 13.8px;
+            text-wrap: nowrap;
+            letter-spacing: 0.15px;
+            cursor: pointer;
+        }
+
+        .download-title {
+            display: flex;
+            margin-top: 77px;
+            margin-left: 50px;
+        }
+
+        .download-title .title-1 {
+            font-size: 23.8px;
+            font-weight: 400;
+            margin-left: 20px;
+            margin-top: 7px;
+            letter-spacing: 0.08px;
+        }
+
+        .download-title .title-2,
+        .download-title .title-3 {
+            font-size: 13.5px;
+            font-weight: 400;
+            margin-left: 6px;
+            margin-top: 18px;
+            letter-spacing: 0.46px;
+        }
+
+        .download-title .title-3 {
+            margin-left: 3.5px;
+            cursor: pointer;
+        }
+
+        .download-lang {
+            /* border: var(--test); */
+            display: flex;
+            margin-left: 50px;
+            margin-top: 34px;
+            gap: 25px;
+            justify-content: start;
+            flex-flow: row wrap;
+        }
+
+        .box {
+            border: var(--test);
+            background-color: #f9f9f9;
+            width: 100px;
+            padding: 0.9375rem;
+            text-wrap: wrap;
+            word-break: break-all;
+            text-align: center;
+            border-radius: 5px;
+            width: 302px;
+        }
+
+        .box .lang-name {
+            font-size: 1.25rem;
+            font-weight: 650;
+        }
+
+        .box .translation {
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .box .download-box {
+            background-color: #5cb85c;
+            color: white;
+            padding: 0.5rem 0;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            width: 126px;
+            text-align: center;
+            text-wrap: wrap;
+            margin-top: 1.18rem;
+            margin-left: 4.5rem;
+            letter-spacing: 0px;
+            cursor: pointer;
+        }
+
+        .box .code-1 {
+            font-size: 0.650rem;
+            margin: 5px 0 3px 0;
+            letter-spacing: 0px;
+            cursor: pointer;
+        }
+
+        .box .code-2 {
+            font-size: 0.5rem;
+            margin: 0px 1rem 0.58rem 1rem;
+            line-height: 1rem;
+            letter-spacing: 0px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-1"><a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/"><img
+                            src="images/nav_icon-1.png" alt="logo"></a></div>
+                <div class="logo-2"><a href="https://github.com/C0DESbyKeshav"><img src="images/nav_icon-2.png"
+                            alt="logo"></a></div>
+            </div>
+
+            <div class="explore">
+                <div class="hover-nav">Products <img class="down-arrow" src="images/down_arrow.png">
+                    <div class="hover-options">
+                        <div class="select">Tools & free trials</div>
+                        <div class="select">UltraEdit Enterprise</div>
+                        <div class="select">UltraEdit Core</div>
+                    </div>
+                </div>
+                <div class="hover-nav">Pricing <img class="down-arrow" src="images/down_arrow.png">
+                    <div class="hover-options">
+                        <div class="select">Buy now</div>
+                        <div class="select">Get a quote</div>
+                        <div class="select">For students and educators</div>
+                        <div class="select">Security & compliance</div>
+                        <div class="select">Licensing FAQs</div>
+                        <div class="select">International distributors & partners</div>
+                    </div>
+                </div>
+                <div class="hover-nav">Resources <img class="down-arrow" src="images/down_arrow.png">
+                    <div class="hover-options">
+                        <div class="select extra">Extra downloads
+                            <img class="right-arrow" src="images/right_arrow.png" width="12px">
+                            <div class="extra-options">
+                                <div class="select">Wordfiles</div>
+                                <div class="select">Themes</div>
+                                <div class="select">Macros & scripts</div>
+                                <div class="select">Tags & autocomplete</div>
+                            </div>
+                        </div>
+                        <div class="select">Wiki documentation</div>
+                        <div class="select">Video tutorials</div>
+                        <div class="select">Power tips</div>
+                        <div class="select">Blog</div>
+                        <div class="select">White papers</div>
+                        <div class="select extra">Support
+                            <img class="right-arrow" src="images/right_arrow.png" width="12px">
+                            <div class="extra-options">
+                                <div class="select">FAQs</div>
+                                <div class="select">User forums</div>
+                                <div class="select">Get support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hover-nav">Our company <img class="down-arrow" src="images/down_arrow.png">
+                    <div class="hover-options">
+                        <div class="select">About us</div>
+                        <div class="select">Events</div>
+                        <div class="select">Testimonials</div>
+                        <div class="select">Contact Us</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy">
+                BUY NOW
+            </div>
+
+            <div class="language" title="Switch to English">
+                <img class="globe" src="images/language.png">
+                <div>English</div>
+            </div>
+
+            <div class="search">
+                <img src="images/search.png" width="17px" , height="17.5px">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="upper-main">
+            <div class="head-title">
+                <p>Download <strong>UltraEdit</strong> for Windows <img src="images/reviews.png"></p>
+            </div>
+            <div class="head-subtitle">
+                <p>Download and try UltraEdit before you buy it! This download includes the full Windows</p>
+                <p style="margin-left: 328px">version of the text editor.</p>
+            </div>
+            <div class="head-download">DOWNLOAD MAC OR LINUX VERSION</div>
+        </div>
+
+        <div class="lower-main">
+            <div class="download-title">
+                <img src="images/download.png" width="60px" height="60px">
+                <div class="title-1">Download UltraEdit</div>
+                <div class="title-2">v2025.0 (released 2025-06-06) | </div>
+                <div class="title-3">Hotfix information</div>
+            </div>
+            <div class="download-lang">
+                <div class="box">
+                    <div class="lang-name">English</div>
+                    <div class="translation" style="visibility:hidden">|</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">3D85A4AB6BA55590A24CC3BF26EB35AC2A7DD3AFC6194AFCC16894C7975506D3</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">Deutsch</div>
+                    <div class="translation">German</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">64AE534532CFAAC9F99840B33D1330CC2CE57B1702897990674F6A4AAFB8E974</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">Italiano</div>
+                    <div class="translation">Italian</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">58DB3301916DCC1F0266B4FB5968CDE0CAD7A2F1A5B48A6E3180446ED1FE6152</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">Español</div>
+                    <div class="translation">Spanish</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">EF9E3D26C32B1264291BC12CB9FD8DFC9DD4C9B9A414D514D6B4144F6664C8DE</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">français</div>
+                    <div class="translation">French</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">7E871CB5076F077C76803B938965F49BA21B451C7B5043ED96D512DFFB6CE2E0</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">Português brasileiro</div>
+                    <div class="translation">Brazilian Portuguese</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">24D05D49EB8B2DA97D31DCD8998D93A476E2AA0A2893CFB66C3B0656A8BF935F</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">日本</div>
+                    <div class="translation">Japanese</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">AFD88EEA7207154E724E24B62156A251EC2D1B8771860B4027C36918DA51E866</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">한국어</div>
+                    <div class="translation">Korean</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">3966DFC45997D0AF85B2C8E5B959FF43D2D4B4E1451B0D7CF8345D066250C896</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">华语</div>
+                    <div class="translation">Chinese</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">017BFF42BD2C7DDC7B87E7176340D5A7C2640678FC88EAED752698897834BBCB</div>
+                </div>
+                <div class="box">
+                    <div class="lang-name">華語</div>
+                    <div class="translation">Traditional Chinese</div>
+                    <div class="download-box">Download 64-bit</div>
+                    <div class="code-1">SHA256</div>
+                    <div class="code-2">D5E5809268D91F30A93E212FC7FE05702A6D826A586D6C175A64AEB2ACC0C6D0</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h1 style="text-align:center; padding:50px;">C0DESbyKeshav</h1>
+    </footer>
+</body>
+
+</html>
