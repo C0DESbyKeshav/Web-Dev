@@ -237,6 +237,10 @@
             cursor: pointer;
         }
 
+        .head-download:hover {
+            background-color: #00a7c1;
+        }
+
         .download-title {
             display: flex;
             margin-top: 77px;
@@ -270,13 +274,14 @@
             display: flex;
             margin-left: 50px;
             margin-top: 34px;
+            margin-bottom: 60px;
             gap: 25px;
             justify-content: start;
             flex-flow: row wrap;
         }
 
         .box {
-            border: var(--test);
+            /* border: var(--test); */
             background-color: #f9f9f9;
             width: 100px;
             padding: 0.9375rem;
@@ -326,6 +331,143 @@
             margin: 0px 1rem 0.58rem 1rem;
             line-height: 1rem;
             letter-spacing: 0px;
+            cursor: pointer;
+        }
+
+        .upper-foot {
+            display: flex;
+            flex-flow: column wrap;
+            /* border-top: 2px solid white; */
+            background-color: #222;
+            padding-top: 48px;
+            padding-left: 281px;
+            padding-right: 280px;
+            padding-bottom: 48px;
+        }
+
+        .container-1 {
+            display: flex;
+            flex-flow: row nowrap;
+            /* border: 1px solid white; */
+            color: white;
+            /* border-bottom: 1px solid white; */
+            padding-top: 24px;
+            padding-bottom: 99px;
+        }
+
+        .container-1 .title {
+            justify-self: start;
+            margin-top: 124px;
+            text-wrap: wrap;
+        }
+
+        .container-1 .title .head {
+            margin-left: 65px;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .container-1 .title .body {
+            margin-top: 11px;
+            margin-left: 20px;
+        }
+
+        .container-1 .title .body-2 {
+            text-align: center;
+            margin-top: 2.5px;
+        }
+
+        .container-1 .subscribe {
+            background-color: white;
+            border-radius: 12px;
+            padding: 29px 35px;
+            margin-top: 0px;
+            margin-left: 127px;
+            width: 345px;
+        }
+
+        .container-1 .subscribe h3 {
+            color: #00B6D1;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding-left: 14px;
+        }
+
+        .container-1 .subscribe form {
+            margin-left: 0.699px;
+            margin-top: 24px;
+        }
+
+        .container-1 .subscribe form label {
+            color: black;
+            font-size: 0.85rem;
+            margin-left: 75px;
+            letter-spacing: 0.35px;
+        }
+
+        .container-1 .subscribe form input {
+            height: 50px;
+            width: 273.8px;
+            border: none;
+            border: 1px solid rgb(217, 217, 217);
+            margin-top: 3px;
+        }
+
+        .container-1 .subscribe .sign-up {
+            color: #fff;
+            box-shadow: 0 12px 18px -6px rgba(77, 170, 242, .37);
+            background-color: #00b6d1;
+            border-radius: 5px;
+            margin-top: 11.5px;
+            padding: 13px 0px;
+            text-align: center;
+            margin-left: 0.699px;
+            font-size: 16.1px;
+            font-weight: 700;
+            margin-bottom: 16.5px;
+            cursor: pointer;
+        }
+
+        .container-2 {
+            /* border-top: 1px solid white; */
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: start;
+            color: white;
+            /* border: 1px solid white; */
+        }
+
+        .container-2 .faq-1 {
+            margin-top: 23px;
+        }
+
+        .faq-head {
+            font-size: 24px;
+        }
+
+        .container-2 .faq-1 .body-1 {
+            margin-top: 11px;
+        }
+
+        .container-2 .faq-1 .body-2 {
+            margin-top: 18.5px;
+        }
+
+        .container-2 .faq-2 .faq-head {
+            margin-top: 17px;
+        }
+
+        .container-2 .faq-2 .body {
+            margin-top: 10px;
+            line-height: 24px;
+        }
+
+        .container-2 .faq-2 {
+            margin-bottom: 24px;
+        }
+
+        .faq-link-color {
+            color: #00b6d1;
             cursor: pointer;
         }
     </style>
@@ -505,6 +647,44 @@
     </main>
 
     <footer>
+        <div class="upper-foot">
+            <div class="container-1">
+                <div class="title">
+                    <p class="head">Join the UltraEdit newsletter</p>
+                    <div class="body">
+                        <p class="body-1">Sign up for our newsletter and receive emails for the latest</p>
+                        <p class="body-2">news, blogs, and special deals on UltraEdit.</p>
+                    </div>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our emails</h3>
+                    <form action="post">
+                        <label for="name">Enter email address</label>
+                        <input type="text" title="Please fill out this field.">
+                    </form>
+                    <div class="sign-up">SIGN UP</div>
+                </div>
+            </div>
+            <div class="container-2">
+                <div class="faq-1">
+                    <div class="faq-head">EXE or MSI?</div>
+                    <div class="body-1">The EXE builds of our products are the preferred download for most of our users,
+                        running Windows 10 and later.</div>
+                    <div class="body-2">We make MSI builds available for bulk or silent deployments (command line, GPO,
+                        SCCM, etc.).
+                        <span class="faq-link-color" title="Download UltraEdit MSI builds">Get the UltraEdit MSI
+                            installer.</span>
+                    </div>
+                </div>
+                <div class="faq-2">
+                    <div class="faq-head">Free trial period</div>
+                    <div class="body">This application comes with a free, fully functional 30 day trial period. After
+                        the trial period expires, you must <span class="faq-link-color">purchase a license</span> to
+                        continue using it.</div>
+                </div>
+            </div>
+        </div>
+
         <h1 style="text-align:center; padding:50px;">C0DESbyKeshav</h1>
     </footer>
 </body>
