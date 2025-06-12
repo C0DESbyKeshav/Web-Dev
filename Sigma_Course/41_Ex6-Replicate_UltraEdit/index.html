@@ -411,6 +411,7 @@
             border: none;
             border: 1px solid rgb(217, 217, 217);
             margin-top: 3px;
+            padding: 10px;
         }
 
         .container-1 .subscribe .sign-up {
@@ -469,6 +470,134 @@
         .faq-link-color {
             color: #00b6d1;
             cursor: pointer;
+        }
+
+        .lower-foot {
+            /* border: var(--test); */
+            padding: 56px 172px 0px 170px;
+        }
+
+        .lower-foot .direct-links {
+            /* border: var(--test); */
+            display: flex;
+            gap: 11.2px;
+        }
+
+        .lower-foot .direct-links .box {
+            /* border: var(--test); */
+            text-align: left;
+            text-wrap: wrap;
+            word-break: keep-all;
+            background-color: white;
+            font-size: 1rem;
+        }
+
+        .lower-foot .direct-links .box .head {
+            /* border: var(--test); */
+            font-weight: 650;
+            text-wrap: nowrap;
+        }
+
+        .lower-foot .direct-links .box .body {
+            /* border: var(--test); */
+            font-size: 0.86rem;
+            margin-top: 20px;
+        }
+
+        .lower-foot .direct-links .box .body ul {
+            /* border: var(--test); */
+            display: flex;
+            flex-flow: column wrap;
+            color: #222;
+        }
+
+        .lower-foot .direct-links .box .body ul li {
+            /* border: var(--test); */
+            list-style-type: none;
+            margin-bottom: 4px;
+            font-weight: 500px;
+        }
+
+        .lower-foot .direct-links .box .body form input {
+            margin-top: 10px;
+            border: none;
+            border: 1px solid rgb(217, 217, 217);
+            border-radius: 7px;
+            padding: 12px 22px 10px 15px;
+        }
+
+        .lower-foot .direct-links .box .body .subscribe {
+            color: #fff;
+            background-color: #00b6d1;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 10px 0px;
+            text-align: center;
+            margin-left: 0.699px;
+            font-size: 13.6px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .lower-foot .direct-links .box .body .subscribe:hover {
+            background-color: #00a7c1;
+        }
+
+        .lower-foot .direct-links .box .body ul li:hover {
+            cursor: pointer;
+            color: #444444;
+        }
+
+        .lower-foot .conclusion {
+            position: relative;
+        }
+
+        .lower-foot .conclusion .container-1 {
+            display: flex;
+            margin-top: 10px;
+            flex-flow: row wrap;
+            gap: 540px;
+            height: 165px;
+        }
+
+        .lower-foot .conclusion .container-1 .logo img {
+            width: 158px;
+            margin-left: 110px;
+            cursor: pointer;
+            /* border: var(--test); */
+        }
+
+        .lower-foot .conclusion .container-1 .social-icons {
+            margin-top: 7px;
+            /* border: var(--test); */
+        }
+
+        .lower-foot .conclusion .container-1 .social-icons ul li {
+            display: inline-block;
+            padding: 5px;
+            padding-right: 4px;
+            /* border: var(--test); */
+        }
+
+        .lower-foot .conclusion .container-1 .social-icons ul li img {
+            width: 24px;
+            cursor: pointer;
+            /* border: var(--test); */
+        }
+
+        .lower-foot .conclusion .container-1 .social-icons ul li img:hover {
+            width: 27px;
+            /* border: var(--test); */
+        }
+
+        .lower-foot .conclusion .container-2 {
+            /* border: var(--test); */
+            color: black;
+            position: absolute;
+            top: 58%;
+            left: 110px;
+            font-size: 0.78rem;
+            letter-spacing: -0.2px;
         }
     </style>
 </head>
@@ -685,7 +814,110 @@
             </div>
         </div>
 
-        <h1 style="text-align:center; padding:50px;">C0DESbyKeshav</h1>
+        <div class="lower-foot">
+            <div class="direct-links">
+                <div class="box">
+                    <div class="head">What’s your language?</div>
+                    <div class="body">
+                        <ul>
+                            <li>Code editor (General)</li>
+                            <li>Text editor</li>
+                            <li>Hex/Binary</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Unix shell scripts</li>
+                            <li>PL/SQL</li>
+                            <li>EDI</li>
+                            <li>C++</li>
+                            <li>PHP</li>
+                            <li>XML</li>
+                            <li>Markdown</li>
+                            <li>SAS</li>
+                            <li>Visual Basic (VB)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="head">What do you need to do?</div>
+                    <div class="body">
+                        <ul>
+                            <li>Edit large text files</li>
+                            <li>Use secure and compliant software</li>
+                            <li>Work with unique languages and formats</li>
+                            <li>Edit hex and binary files</li>
+                            <li>Reformat XML/JSON files</li>
+                            <li>Massive find and replace operations</li>
+                            <li>Edit via columns/blocks</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="head">What type of user are you?</div>
+                    <div class="body">
+                        <ul>
+                            <li>Programmer / Developer</li>
+                            <li>Web Developer</li>
+                            <li>Database Manager</li>
+                            <li>System Administrator</li>
+                            <li>Technical Writer</li>
+                            <li>Editor / Publisher</li>
+                            <li>Medical / Pharmaceutical</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="head">General</div>
+                    <div class="body">
+                        <ul>
+                            <li>Contact</li>
+                            <li>License Agreement (EULA)</li>
+                            <li>End of Life Policy</li>
+                            <li>Libraries and Patents</li>
+                            <li>Information Policy</li>
+                            <li>Privacy Policy</li>
+                            <li>Uninstall Instructions</li>
+                            <li>Sitemap</li>
+                            <li>Legal</li>
+                            <li>Software Security</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="head">Subscribe to Newsletter</div>
+                    <div class="body">
+                        <p style="margin-top:-3px">Get the latest news on new</p>
+                        <p style="margin-top:5px">releases, event, and</p>
+                        <p style="margin-top:5px">developments.</p>
+                        <form action="post">
+                            <input type="text" placeholder="Enter email address...">
+                        </form>
+                        <div class="subscribe">SUBSCRIBE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <div class="container-1">
+                    <div class="logo"><img src="images/nav_icon-1.png" title="Site Logo"></div>
+                    <div class="social-icons">
+                        <ul>
+                            <li title="Social icons"><img src="images/01_twitter.png"></li>
+                            <li><img src="images/02_github.png"></li>
+                            <li><img src="images/03_youtube.png"></li>
+                            <li><img src="images/04_facebook.png"></li>
+                            <li><img src="images/05_instagram.png"></li>
+                            <li><img src="images/06_linkedin.png"></li>
+                            <li><img src="images/07_reddit.png"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-2">
+                    <p>&copy;2025 UltraEdit. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <h1 style="text-align:center; padding:50px;">C0DESbyKeshav</h1> -->
     </footer>
 </body>
 

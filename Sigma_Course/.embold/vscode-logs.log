@@ -841,3 +841,62 @@ OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, shari
 2025-06-11 12:42:00 info: Current extension version: 0.3.0
 2025-06-11 12:42:00 info: Stored extension version: 0.3.0
 2025-06-11 12:42:00 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-06-12 03:42:30 info: Row(s) deleted
+2025-06-12 03:42:30 info: Row(s) deleted
+2025-06-12 04:43:29 info: Row(s) deleted
+2025-06-12 12:24:11 info: Congratulations, your extension "Embold" is now active!
+2025-06-12 12:24:11 info: ************* init ****************
+2025-06-12 12:24:11 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-12 12:24:26 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-12 12:24:26 info: Extension installed on machine OS : win32
+2025-06-12 12:24:26 info: Fetched the issues from DB
+2025-06-12 12:24:26 info: Java version installed on machine : 
+openjdk version "21.0.6" 2025-01-21 LTS
+OpenJDK Runtime Environment Temurin-21.0.6+7 (build 21.0.6+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, sharing)
+
+2025-06-12 12:24:26 info: Java installed on machine.
+2025-06-12 12:24:26 info: Embold extension version response:{"hasSupport":false,"version":"0.2.1","changeNotes":"<div> <p>Release Date: 30 Apr, 2025 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-06-12 12:24:26 info: Current installed embold extension version : 0.3.0
+2025-06-12 12:24:26 info: Latest embold extension version on marketplace : 0.2.1
+2025-06-12 12:24:26 info: Current extension version: 0.3.0
+2025-06-12 12:24:26 info: Stored extension version: 0.3.0
+2025-06-12 12:24:26 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-06-12 15:51:37 info: Congratulations, your extension "Embold" is now active!
+2025-06-12 15:51:37 info: ************* init ****************
+2025-06-12 15:51:37 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-12 15:51:42 info: Extraction complete for source: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\resources\embold-scanner-archive.zip, destination: c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-06-12 15:51:42 info: Extension installed on machine OS : win32
+2025-06-12 15:51:42 info: Fetched the issues from DB
+2025-06-12 15:51:42 info: Java version installed on machine : 
+openjdk version "21.0.6" 2025-01-21 LTS
+OpenJDK Runtime Environment Temurin-21.0.6+7 (build 21.0.6+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, sharing)
+
+2025-06-12 15:51:42 info: Java installed on machine.
+2025-06-12 15:51:46 info: Embold extension version response:{"hasSupport":false,"version":"0.2.1","changeNotes":"<div> <p>Release Date: 30 Apr, 2025 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-06-12 15:51:46 info: Current installed embold extension version : 0.3.0
+2025-06-12 15:51:46 info: Latest embold extension version on marketplace : 0.2.1
+2025-06-12 15:51:46 info: Current extension version: 0.3.0
+2025-06-12 15:51:46 info: Stored extension version: 0.3.0
+2025-06-12 15:51:46 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-06-13 01:42:38 info: Row(s) deleted
+2025-06-13 01:42:57 info: Row(s) deleted
+2025-06-13 01:43:18 info: Row(s) deleted
+2025-06-13 01:43:35 info: Row(s) deleted
+2025-06-13 01:43:45 info: Row(s) deleted
+2025-06-13 01:43:52 info: Row(s) deleted
+2025-06-13 01:44:03 info: Row(s) deleted
+2025-06-13 01:44:14 info: Row(s) deleted
+2025-06-13 01:44:25 info: Row(s) deleted
+2025-06-13 01:51:29 info: Row(s) deleted
+2025-06-13 01:53:36 info: Row(s) deleted
+2025-06-13 01:54:02 info: Row(s) deleted
+2025-06-13 01:54:25 info: Row(s) deleted
+2025-06-13 01:54:45 info: Row(s) deleted
+2025-06-13 01:55:04 info: Row(s) deleted
+2025-06-13 01:55:26 info: Row(s) deleted
+2025-06-13 01:55:52 info: Row(s) deleted
+2025-06-13 03:18:26 info: Congratulations, your extension "Embold" is now active!
+2025-06-13 03:18:26 info: ************* init ****************
+2025-06-13 03:18:26 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.0\temp
