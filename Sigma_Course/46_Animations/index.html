@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage about me learning CSS Animations">
+    <title>CSS Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+        }
+
+        .space {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            /* background-color: rgba(1, 33, 70, 255); */
+            background-color: #101820;
+            /* background-color: black; */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .earth {
+            justify-self: center;
+            align-self: end;
+            width: 90vw;
+            height: 90vw;
+            border-radius: 100%;
+            background-color: #1F3A93;
+            transform: translateY(135vh);
+            overflow: hidden;
+            box-shadow: 0px 0px 100px rgb(114, 169, 191);
+            z-index: 1;
+        }
+
+        .clouds,
+        .cloud-layer-2 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: sky 99s linear 0s infinite;
+        }
+
+        @keyframes sky {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .clouds .cloud1 {
+            position: absolute;
+            left: 5%;
+            top: 60%;
+            transform: rotate(-110deg);
+        }
+
+        .clouds .cloud2 {
+            position: absolute;
+            left: 20%;
+            top: 10%;
+            transform: rotate(-35deg);
+        }
+
+        .clouds .cloud3 {
+            position: absolute;
+            right: 15%;
+            top: 10%;
+            transform: rotate(35deg);
+        }
+
+        .clouds .cloud4 {
+            position: absolute;
+            right: 5%;
+            top: 35%;
+            transform: rotate(90deg);
+        }
+
+        .clouds .cloud5 {
+            position: absolute;
+            right: 20%;
+            bottom: 10%;
+            transform: rotate(140deg);
+        }
+
+        .clouds .cloud6 {
+            position: absolute;
+            left: 30%;
+            bottom: 0%;
+            transform: rotate(-170deg);
+        }
+
+        .cloud-layer-2 {
+            width: 70%;
+            height: 70%;
+        }
+
+        .cloud-layer-2 .cloud1 {
+            position: absolute;
+            left: 0%;
+            top: 30%;
+            transform: rotate(-75deg);
+        }
+
+        .cloud-layer-2 .cloud2 {
+            position: absolute;
+            left: 50%;
+            top: 5%;
+            transform: none;
+        }
+
+        .cloud-layer-2 .cloud3 {
+            position: absolute;
+            top: 60%;
+            right: 5%;
+            transform: rotate(110deg);
+        }
+
+        .cloud-layer-2 .cloud4 {
+            position: absolute;
+            left: 5%;
+            top: 100%;
+            transform: rotateX(180deg) rotateZ(-40deg);
+        }
+
+        .cloud {
+            position: relative;
+            height: 130px;
+            width: 210px;
+        }
+
+        .cloud .rectangle {
+            position: absolute;
+            bottom: 0%;
+            width: 210px;
+            height: 60px;
+            border-radius: 100px;
+            background-color: skyblue;
+            box-shadow: 5px 5px 5px rgb(114, 169, 191);
+        }
+
+        .cloud .circle-small {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            background-color: skyblue;
+            top: 35px;
+            left: 30px;
+        }
+
+        .cloud .circle-big {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 100%;
+            background-color: skyblue;
+            top: 0px;
+            left: 60px;
+            box-shadow: 5px 5px 5px rgb(114, 169, 191);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .stars .star {
+            position: absolute;
+            border-radius: 100%;
+            background-color: white;
+            box-shadow: 0px 0px 100% rgb(255, 255, 255);
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: star 5s ease 0s infinite;
+        }
+
+        .stars .star1 {
+            top: 2.6%;
+            left: 4.3%;
+        }
+
+        .stars .star2 {
+            top: 5.1%;
+            left: 16.7%;
+        }
+
+        .stars .star3 {
+            top: 1.9%;
+            left: 28.9%;
+        }
+
+        .stars .star4 {
+            top: 6.3%;
+            left: 42.2%;
+        }
+
+        .stars .star5 {
+            top: 3.8%;
+            left: 58.4%;
+        }
+
+        .stars .star6 {
+            top: 7.1%;
+            left: 69.6%;
+        }
+
+        .stars .star7 {
+            top: 4.5%;
+            left: 81.3%;
+        }
+
+        .stars .star8 {
+            top: 8.2%;
+            left: 90.9%;
+        }
+
+        .stars .star9 {
+            top: 11.5%;
+            left: 6.2%;
+        }
+
+        .stars .star10 {
+            top: 13.7%;
+            left: 18.1%;
+        }
+
+        .stars .star11 {
+            top: 16.9%;
+            left: 29.4%;
+        }
+
+        .stars .star12 {
+            top: 12.4%;
+            left: 39.7%;
+        }
+
+        .stars .star13 {
+            top: 18.3%;
+            left: 54.1%;
+        }
+
+        .stars .star14 {
+            top: 14.6%;
+            left: 66.3%;
+        }
+
+        .stars .star15 {
+            top: 17.5%;
+            left: 77.2%;
+        }
+
+        .stars .star16 {
+            top: 12.9%;
+            left: 89.3%;
+        }
+
+        .stars .star17 {
+            top: 24.8%;
+            left: 3.1%;
+        }
+
+        .stars .star18 {
+            top: 22.6%;
+            left: 14.8%;
+        }
+
+        .stars .star19 {
+            top: 21.4%;
+            left: 27.3%;
+        }
+
+        .stars .star20 {
+            top: 28.1%;
+            left: 35.7%;
+        }
+
+        .stars .star21 {
+            top: 26.9%;
+            left: 49.8%;
+        }
+
+        .stars .star22 {
+            top: 22.5%;
+            left: 60.3%;
+        }
+
+        .stars .star23 {
+            top: 27.2%;
+            left: 73.5%;
+        }
+
+        .stars .star24 {
+            top: 23.8%;
+            left: 85.1%;
+        }
+
+        .stars .star25 {
+            top: 35.5%;
+            left: 9.4%;
+        }
+
+        .stars .star26 {
+            top: 31.6%;
+            left: 19.6%;
+        }
+
+        .stars .star27 {
+            top: 38.3%;
+            left: 32.8%;
+        }
+
+        .stars .star28 {
+            top: 34.7%;
+            left: 45.6%;
+        }
+
+        .stars .star29 {
+            top: 39.2%;
+            left: 56.4%;
+        }
+
+        .stars .star30 {
+            top: 33.1%;
+            left: 67.1%;
+        }
+
+        .stars .star31 {
+            top: 36.4%;
+            left: 79.6%;
+        }
+
+        .stars .star32 {
+            top: 31.7%;
+            left: 93.2%;
+        }
+
+        .stars .star33 {
+            top: 47.5%;
+            left: 7.5%;
+        }
+
+        .stars .star34 {
+            top: 44.3%;
+            left: 22.6%;
+        }
+
+        .stars .star35 {
+            top: 42.9%;
+            left: 36.9%;
+        }
+
+        .stars .star36 {
+            top: 48.7%;
+            left: 50.2%;
+        }
+
+        .stars .star37 {
+            top: 41.1%;
+            left: 63.7%;
+        }
+
+        .stars .star38 {
+            top: 45.6%;
+            left: 75.3%;
+        }
+
+        .stars .star39 {
+            top: 49.3%;
+            left: 88.7%;
+        }
+
+        .stars .star40 {
+            top: 59.1%;
+            left: 11.6%;
+        }
+
+        .stars .star41 {
+            top: 56.3%;
+            left: 27.1%;
+        }
+
+        .stars .star42 {
+            top: 51.7%;
+            left: 41.2%;
+        }
+
+        .stars .star43 {
+            top: 58.2%;
+            left: 54.6%;
+        }
+
+        .stars .star44 {
+            top: 53.4%;
+            left: 70.1%;
+        }
+
+        .stars .star45 {
+            top: 57.9%;
+            left: 83.5%;
+        }
+
+        .stars .star46 {
+            top: 61.7%;
+            left: 96.3%;
+        }
+
+        .stars .star47 {
+            top: 67.4%;
+            left: 2.2%;
+        }
+
+        .stars .star48 {
+            top: 64.3%;
+            left: 14.9%;
+        }
+
+        .stars .star49 {
+            top: 69.6%;
+            left: 26.6%;
+        }
+
+        .stars .star50 {
+            top: 65.2%;
+            left: 37.3%;
+        }
+
+
+        @keyframes star {
+            0% {
+                width: 2px;
+                height: 2px;
+                box-shadow: 0px 0px 10px rgb(114, 169, 191);
+            }
+
+            20% {
+                width: 3px;
+                height: 3px;
+                box-shadow: 0px 0px 12px rgb(114, 169, 191);
+            }
+
+            40% {
+                width: 4px;
+                height: 4px;
+                box-shadow: 0px 0px 12px rgb(114, 169, 191);
+            }
+
+            60% {
+                width: 4px;
+                height: 4px;
+                box-shadow: 0px 0px 15px rgb(114, 169, 191);
+            }
+
+            80% {
+                width: 3px;
+                height: 3px;
+                box-shadow: 0px 0px 12px rgb(114, 169, 191);
+            }
+
+            100% {
+                width: 2px;
+                height: 2px;
+                box-shadow: 0px 0px 15px rgb(114, 169, 191);
+            }
+        }
+
+        .astronaut {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 0%;
+            right: 0%;
+            z-index: 1;
+        }
+
+        .astronaut .helmet {
+            position: absolute;
+            width: 97px;
+            height: 97px;
+            border-radius: 100%;
+            top: 24px;
+            left: 102.5px;
+            background-color: #fffefe;
+            border: 2px solid black;
+            z-index: inherit;
+            opacity: 100%;
+        }
+
+        .astronaut .face-outer {
+            position: absolute;
+            width: 81px;
+            height: 81px;
+            border-radius: 100%;
+            top: 32px;
+            left: 110px;
+            background-color: #b2c0c7;
+            border: 2px solid black;
+            z-index: inherit;
+            opacity: 100%;
+        }
+
+        .astronaut .face-inner {
+            position: absolute;
+            width: 72px;
+            height: 72px;
+            border-radius: 100%;
+            top: 37px;
+            left: 115px;
+            background-color: black;
+            overflow: hidden;
+            animation: node 2s ease 0s infinite;
+            z-index: inherit;
+            opacity: 100%;
+        }
+
+        @keyframes node {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .astronaut .face-inner .shine-1 {
+            position: absolute;
+            left: 10px;
+            top: 2px;
+            width: 15px;
+            height: 36px;
+            background-color: #a2a3a3;
+            border-radius: 100%;
+            transform: rotate(40deg);
+            z-index: inherit;
+        }
+
+        .astronaut .face-inner .jugaad {
+            position: absolute;
+            left: 10px;
+            top: 11px;
+            width: 60px;
+            height: 60px;
+            background-color: black;
+            border-radius: 100%;
+            z-index: 2;
+        }
+
+        .astronaut .face-inner .reflect {
+            position: absolute;
+            left: 12px;
+            top: 15px;
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 100%;
+            opacity: 20%;
+            z-index: 2;
+        }
+
+        .astronaut .face-inner .reflect-shine {
+            position: absolute;
+            left: 10px;
+            top: 11px;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 100%;
+            opacity: 10%;
+            z-index: 2;
+        }
+
+        .astronaut .face-inner .shine-2 {
+            position: absolute;
+            left: 5px;
+            top: 38px;
+            width: 8px;
+            height: 10px;
+            background-color: #a2a3a3;
+            border-radius: 100%;
+            transform: rotate(-10deg);
+            z-index: 3;
+        }
+
+        .astronaut .face-inner .shine-3 {
+            position: absolute;
+            right: 4px;
+            top: 41px;
+            width: 5.5px;
+            height: 6px;
+            background-color: #a2a3a3;
+            border-radius: 100%;
+            transform: rotate(30deg);
+            z-index: 3;
+        }
+
+        .astronaut .face-inner .shine-4 {
+            position: absolute;
+            right: 10px;
+            bottom: 8px;
+            width: 9px;
+            height: 17px;
+            background-color: #a2a3a3;
+            border-radius: 100%;
+            transform: rotate(40deg);
+            z-index: 3;
+        }
+
+        .astronaut .ear-left {
+            position: absolute;
+            top: 60px;
+            left: 95px;
+            width: 15px;
+            height: 34px;
+            border: 2px solid black;
+            background-color: #fffefe;
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 100%;
+            transform: rotate(-3deg);
+            animation: node-left 2s ease 0s infinite;
+            z-index: 0;
+        }
+
+        @keyframes node-left {
+            0% {
+                transform: translate(0px);
+            }
+
+            50% {
+                transform: translate(0px, 5px) rotate(-10deg);
+            }
+
+            100% {
+                transform: translate(0px);
+            }
+        }
+
+        .astronaut .ear-right {
+            position: absolute;
+            top: 60px;
+            right: 94px;
+            width: 15px;
+            height: 34px;
+            border: 2px solid black;
+            background-color: #fffefe;
+            border-top-right-radius: 100%;
+            border-bottom-right-radius: 100%;
+            animation: node-right 2s ease 0s infinite;
+            transform: rotate(3deg);
+            z-index: 0;
+        }
+
+        @keyframes node-right {
+            0% {
+                transform: translate(0px);
+            }
+
+            50% {
+                transform: translate(0px, -5px) rotate(-10deg);
+            }
+
+            100% {
+                transform: translate(0px);
+            }
+        }
+
+        .astronaut .pipe {
+            position: absolute;
+            top: 70px;
+            right: 95px;
+            width: 65px;
+            height: 65px;
+            border: 8px solid #b2c0c7;
+            outline: 2px solid black;
+            border-radius: 100%;
+            transform: rotateX(10deg);
+            animation: stretch 2s linear 0s infinite;
+            z-index: -1;
+            opacity: 100%;
+        }
+
+        @keyframes stretch {
+            0% {
+                transform: skew(0deg);
+            }
+
+            50% {
+                transform: skewY(-5deg);
+            }
+
+            100% {
+                transform: skew(0deg);
+            }
+        }
+
+        .astronaut .pipe .line {
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-radius: 100%;
+            border-bottom: 1px solid #101820;
+        }
+
+        .astronaut .pipe .pipeline-1 {
+            top: 10px;
+            left: 48px;
+            transform: rotate(-20deg);
+        }
+
+        .astronaut .pipe .pipeline-2 {
+            top: 15px;
+            left: 49px;
+            transform: rotate(-10deg);
+        }
+
+        .astronaut .pipe .pipeline-3 {
+            top: 22px;
+            left: 49px;
+            transform: rotate(0deg);
+        }
+
+        .astronaut .pipe .pipeline-4 {
+            top: 29px;
+            left: 48px;
+            transform: rotate(20deg);
+        }
+
+        .astronaut .pipe .pipeline-5 {
+            top: 36px;
+            left: 45px;
+            transform: rotate(40deg);
+        }
+
+        .astronaut .arm-left {
+            position: absolute;
+            top: 100px;
+            left: 112px;
+            width: 50px;
+            height: 50px;
+            background-color: #b2c0c7;
+            border: 2px solid black;
+            border-bottom: none;
+            border-radius: 100%;
+            z-index: -1;
+            opacity: 100%;
+        }
+
+        .astronaut .arm-right {
+            position: absolute;
+            top: 100px;
+            right: 111px;
+            width: 50px;
+            height: 50px;
+            background-color: #b2c0c7;
+            border: 2px solid black;
+            border-bottom: none;
+            border-radius: 100%;
+            z-index: -1;
+            opacity: 100%;
+        }
+
+        .astronaut .hand-left {
+            position: absolute;
+            top: 117px;
+            left: 106px;
+            width: 20px;
+            height: 23px;
+            z-index: 2;
+        }
+
+        .astronaut .hand-left .fingers {
+            position: absolute;
+            top: 1px;
+            left: 4px;
+            width: 13px;
+            height: 8px;
+            background-color: white;
+            border-radius: 100%;
+            transform: rotate(-20deg);
+        }
+
+        .astronaut .hand-left .joint {
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            width: 10px;
+            height: 15px;
+            background-color: white;
+            border-radius: 100%;
+            transform: rotate(14deg);
+        }
+
+        .astronaut .hand-left .palm {
+            position: absolute;
+            bottom: 2px;
+            left: 2px;
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-top: none;
+
+            border-radius: 100%;
+        }
+
+        .astronaut .hand-right {
+            position: absolute;
+            top: 117px;
+            right: 106px;
+            width: 20px;
+            height: 23px;
+            z-index: 2;
+        }
+
+        .astronaut .hand-right .fingers {
+            position: absolute;
+            top: 1px;
+            right: 4px;
+            width: 13px;
+            height: 8px;
+            background-color: white;
+            border-radius: 100%;
+            transform: rotate(20deg);
+        }
+
+        .astronaut .hand-right .joint {
+            position: absolute;
+            top: 3px;
+            right: 2.5px;
+            width: 10px;
+            height: 15px;
+            background-color: white;
+            border-radius: 100%;
+            transform: rotate(-10deg);
+        }
+
+        .astronaut .hand-right .palm {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 100%;
+        }
+
+        .astronaut .heart {
+            position: absolute;
+            top: 100px;
+            left: 115px;
+            width: 70px;
+            height: 60px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: heart 3s linear 0s infinite;
+            z-index: 1;
+        }
+
+        @keyframes heart {
+            0% {
+                transform: scale(0.95);
+            }
+
+            25% {
+                transform: scale(1.05);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            75% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(0.95);
+            }
+        }
+
+        .astronaut .heart .left {
+            position: absolute;
+            top: 0px;
+            left: 7px;
+            width: 38px;
+            height: 55px;
+            background-color: #fe313d;
+            border-radius: 100%;
+            border-bottom-left-radius: 80%;
+            transform: rotate(-40deg);
+            animation: bright 3s linear 0s infinite;
+        }
+
+        .astronaut .heart .right {
+            position: absolute;
+            top: 0px;
+            right: 6px;
+            width: 38px;
+            height: 55px;
+            background-color: #fe313d;
+            border-radius: 100%;
+            border-bottom-right-radius: 80%;
+            /* border-radius: top-left top-right bottom-right bottom-left / vertical-top-left vertical-top-right vertical-bottom-right vertical-bottom-left; */
+            transform: rotate(40deg);
+            animation: bright 3s linear 0s infinite;
+        }
+
+        .astronaut .heart .box-left {
+            position: absolute;
+            top: 45px;
+            left: 20px;
+            width: 20px;
+            height: 10px;
+            background-color: #fe313d;
+            border-bottom-right-radius: 80%;
+            transform: rotate(40deg);
+            animation: bright 3s linear 0s infinite;
+        }
+
+        .astronaut .heart .box-right {
+            position: absolute;
+            top: 45px;
+            right: 19px;
+            width: 20px;
+            height: 10px;
+            background-color: #fe313d;
+            border-bottom-left-radius: 80%;
+            transform: rotate(-40deg);
+            animation: bright 3s linear 0s infinite;
+        }
+
+        @keyframes bright {
+            0% {
+                background-color: pink;
+            }
+
+            50% {
+                background-color: #fe313d;
+            }
+
+            100% {
+                background-color: red;
+            }
+        }
+
+        .astronaut .heart .shine-1 {
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            width: 6px;
+            height: 13px;
+            background-color: #a2a3a3;
+            border-radius: 100%;
+            transform: rotate(45deg);
+        }
+
+        .astronaut .heart .shine-2 {
+            position: absolute;
+            bottom: 5px;
+            left: 19px;
+            width: 2px;
+            height: 20px;
+            background-color: #a2a3a3;
+            border-radius: 100%;
+            transform: rotate(-47deg);
+        }
+
+        .astronaut .foot-left {
+            position: absolute;
+            top: 136px;
+            left: 105px;
+            width: 25px;
+            height: 36px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 100%;
+            transform: rotate(-22deg);
+            animation: shoe-left 5s linear 0s infinite;
+            z-index: 2;
+        }
+
+        @keyframes shoe-left {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .astronaut .foot-left .line-1 {
+            position: absolute;
+            left: 3px;
+            top: 2.5px;
+            width: 15px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-left .line-2 {
+            position: absolute;
+            left: 0.5px;
+            top: 7px;
+            width: 20px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-left .line-3 {
+            position: absolute;
+            left: 0px;
+            top: 11.5px;
+            width: 22px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-left .line-4 {
+            position: absolute;
+            left: 0px;
+            top: 15.7px;
+            width: 22px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-left .line-5 {
+            position: absolute;
+            left: 0px;
+            top: 20px;
+            width: 22px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-left .line-6 {
+            position: absolute;
+            left: 1px;
+            top: 25px;
+            width: 19px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-left .line-7 {
+            position: absolute;
+            left: 4px;
+            top: 29px;
+            width: 14px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-right {
+            position: absolute;
+            top: 136px;
+            right: 105px;
+            width: 25px;
+            height: 36px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 100%;
+            transform: rotate(22deg);
+            animation: shoe-right 5s linear 0s infinite;
+            z-index: 2;
+        }
+
+        @keyframes shoe-right {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(10deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .astronaut .foot-right .line-1 {
+            position: absolute;
+            right: 3px;
+            top: 2.5px;
+            width: 15px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-right .line-2 {
+            position: absolute;
+            right: 0.5px;
+            top: 7px;
+            width: 21px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-right .line-3 {
+            position: absolute;
+            right: 0px;
+            top: 11.5px;
+            width: 22px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-right .line-4 {
+            position: absolute;
+            right: 0px;
+            top: 15.7px;
+            width: 22px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-right .line-5 {
+            position: absolute;
+            right: 0px;
+            top: 20px;
+            width: 22px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-right .line-6 {
+            position: absolute;
+            right: 1px;
+            top: 25px;
+            width: 19px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .foot-right .line-7 {
+            position: absolute;
+            right: 4px;
+            top: 29px;
+            width: 14px;
+            border: 0.1px solid black;
+        }
+
+        .astronaut .butt {
+            position: absolute;
+            top: 140px;
+            left: 120px;
+            width: 60px;
+            height: 60px;
+            border-top: 20px solid #b2c0c7;
+            border-radius: 100%;
+        }
+
+        .astronaut .jupiter {
+            position: absolute;
+            top: 139px;
+            left: 81px;
+            width: 137px;
+            height: 137px;
+            border-radius: 100%;
+            z-index: -2;
+        }
+
+        .astronaut .jupiter .skin {
+            position: absolute;
+            top: -3px;
+            left: -1px;
+            width: 137px;
+            height: 137px;
+            border-radius: 100%;
+            box-shadow: 0px 0px 80px white;
+            overflow: hidden;
+        }
+
+        .astronaut .jupiter .skin .skin-1 {
+            position: absolute;
+            top: -14px;
+            left: -10px;
+            width: 139px;
+            height: 20px;
+            /* background-color: #f9b138; */
+            border: 5px solid #f9b138;
+            border-radius: 100%;
+            transform: rotate(-26deg);
+            z-index: 10;
+        }
+
+        .astronaut .jupiter .skin .skin-2 {
+            position: absolute;
+            top: -26px;
+            left: -8px;
+            width: 120px;
+            height: 40px;
+            /* background-color: #f6e5b6; */
+            border: 5px solid #f6e5b6;
+            border-radius: 100%;
+            transform: rotate(-25deg);
+            z-index: 10;
+        }
+
+        .astronaut .jupiter .skin .skin-3 {
+            position: absolute;
+            top: -11px;
+            left: -14px;
+            width: 120px;
+            height: 40px;
+            /* background-color: #e88431; */
+            border: 18px solid #e88431;
+            border-radius: 100%;
+            transform: rotate(-26deg);
+            z-index: 10;
+        }
+
+        .astronaut .jupiter .skin .skin-4 {
+            position: absolute;
+            top: -7px;
+            left: -15px;
+            width: 120px;
+            height: 40px;
+            /* background-color: #f9b138; */
+            border: 5px solid #f9b138;
+            border-radius: 100%;
+            transform: rotate(-25deg);
+            z-index: 10;
+        }
+
+        .astronaut .jupiter .skin .skin-5 {
+            position: absolute;
+            top: -2px;
+            left: -15px;
+            width: 120px;
+            height: 40px;
+            /* background-color: #f6e5b6; */
+            border: 6px solid #f6e5b6;
+            border-radius: 100%;
+            transform: rotate(-23.5deg);
+            z-index: 10;
+        }
+
+        .astronaut .jupiter .skin .skin-6 {
+            position: absolute;
+            top: 4px;
+            left: -15px;
+            width: 120px;
+            height: 40px;
+            /* background-color: #f9b138; */
+            border: 6px solid #f9b138;
+            border-radius: 100%;
+            transform: rotate(-22.2deg);
+            z-index: 10;
+        }
+
+        .astronaut .jupiter .skin .skin-7 {
+            position: absolute;
+            top: 7px;
+            left: -15px;
+            width: 120px;
+            height: 40px;
+            /* background-color: #f6e5b6; */
+            border: 5px solid #f6e5b6;
+            border-radius: 100%;
+            transform: rotate(-23deg);
+            z-index: 10;
+        }
+
+        .astronaut .jupiter .skin .skin-8 {
+            position: absolute;
+            top: 13px;
+            left: -15px;
+            width: 120px;
+            height: 40px;
+            /* background-color: #f9b138; */
+            border: 7px solid #f9b138;
+            border-top: none;
+            border-radius: 100%;
+            transform: rotate(-22deg);
+            z-index: 10;
+        }
+
+        .astronaut .jupiter .skin .skin-9 {
+            position: absolute;
+            top: 22px;
+            left: -15px;
+            width: 140px;
+            height: 43px;
+            background-color: #e88431;
+            border-radius: 100%;
+            transform: rotateZ(-23deg);
+            z-index: 9;
+        }
+
+        .astronaut .jupiter .skin .skin-10 {
+            position: absolute;
+            top: 30px;
+            left: -11px;
+            width: 140px;
+            height: 43px;
+            background-color: #f9b138;
+            border-radius: 100%;
+            transform: rotateZ(-23deg);
+            z-index: 8;
+        }
+
+        .astronaut .jupiter .skin .skin-11 {
+            position: absolute;
+            top: 32px;
+            left: -10px;
+            width: 140px;
+            height: 43px;
+            background-color: #f6e5b6;
+            border-radius: 100%;
+            transform: rotateZ(-23deg);
+            z-index: 7;
+        }
+
+        .astronaut .jupiter .skin .skin-12 {
+            position: absolute;
+            top: 39px;
+            left: -5px;
+            width: 140px;
+            height: 43px;
+            background-color: #f9b138;
+            border-radius: 100%;
+            transform: rotateZ(-25deg);
+            z-index: 6;
+        }
+
+        .astronaut .jupiter .skin .skin-13 {
+            position: absolute;
+            top: 47px;
+            left: -2.3px;
+            width: 140px;
+            height: 43px;
+            background-color: #f6e5b6;
+            border-radius: 100%;
+            transform: rotateZ(-25deg);
+            z-index: 5;
+        }
+
+        .astronaut .jupiter .skin .skin-14 {
+            position: absolute;
+            top: 54px;
+            left: 2.5px;
+            width: 140px;
+            height: 43px;
+            background-color: #e88431;
+            border-radius: 100%;
+            transform: rotateZ(-25deg);
+            z-index: 0;
+        }
+
+        .astronaut .jupiter .skin .skin-15 {
+            position: absolute;
+            top: 61px;
+            left: 4px;
+            width: 140px;
+            height: 43px;
+            background-color: #e88431;
+            border-radius: 100%;
+            transform: rotateZ(-23.5deg);
+            z-index: -1;
+        }
+
+        .astronaut .jupiter .skin .skin-16 {
+            position: absolute;
+            top: 63px;
+            left: 4px;
+            width: 140px;
+            height: 43px;
+            background-color: #f6e5b6;
+            border-radius: 100%;
+            transform: rotateZ(-23deg);
+            z-index: -2;
+        }
+
+        .astronaut .jupiter .skin .skin-17 {
+            position: absolute;
+            top: 65px;
+            left: 5px;
+            width: 140px;
+            height: 43px;
+            background-color: #e88431;
+            border-radius: 100%;
+            transform: rotateZ(-23deg);
+            z-index: -3;
+        }
+
+        .astronaut .jupiter .skin .skin-18 {
+            position: absolute;
+            top: 69px;
+            left: 8px;
+            width: 140px;
+            height: 43px;
+            background-color: #f9b138;
+            border-radius: 100%;
+            transform: rotateZ(-23.5deg);
+            z-index: -4;
+        }
+
+        .astronaut .jupiter .skin .skin-19 {
+            position: absolute;
+            top: 75px;
+            left: 8px;
+            width: 140px;
+            height: 43px;
+            background-color: #f6e5b6;
+            border-radius: 100%;
+            transform: rotateZ(-22.5deg);
+            z-index: -5;
+        }
+
+        .astronaut .jupiter .skin .skin-20 {
+            position: absolute;
+            top: 78px;
+            left: 8px;
+            width: 140px;
+            height: 43px;
+            background-color: #f9b138;
+            border-radius: 100%;
+            transform: rotateZ(-22.5deg);
+            z-index: -6;
+        }
+
+        .astronaut .jupiter .skin .skin-21 {
+            position: absolute;
+            top: 80px;
+            left: 10px;
+            width: 140px;
+            height: 43px;
+            background-color: #e88431;
+            border-radius: 100%;
+            transform: rotateZ(-23deg);
+            z-index: -7;
+        }
+
+        .astronaut .jupiter .skin .skin-22 {
+            position: absolute;
+            top: 94px;
+            left: 30px;
+            width: 110px;
+            height: 30px;
+            background-color: #f6e5b6;
+            border-radius: 100%;
+            transform: rotateZ(-23deg);
+            z-index: -8;
+        }
+
+        .astronaut .jupiter .skin .skin-23 {
+            position: absolute;
+            bottom: 0px;
+            left: 12px;
+            width: 140px;
+            height: 43px;
+            background-color: #e88431;
+            border-radius: 100%;
+            transform: rotateZ(-23deg);
+            z-index: -9;
+        }
+
+        .astronaut .jupiter .ring {
+            position: absolute;
+            top: -55px;
+            left: -60px;
+            width: 260px;
+            height: 260px;
+            border: 35px solid #c3ae87;
+            border-radius: 100%;
+            transform: rotateX(80deg) rotateY(-26deg);
+            z-index: 0;
+        }
+
+        .astronaut .jupiter .ring .layer-out {
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 250px;
+            height: 250px;
+            border: 2px solid #faf0db;
+            border: 2px solid white;
+            border-radius: 100%;
+            border-style: dashed;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: spin 99s linear 0s infinite;
+            z-index: 0;
+        }
+
+        .astronaut .jupiter .ring .layer-mid {
+            position: absolute;
+            top: -30px;
+            left: -20px;
+            width: 240px;
+            height: 240px;
+            border: 10px solid #c89b5e;
+            border-radius: 100%;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: spin 99s linear 0s infinite;
+            z-index: 0;
+        }
+
+        .astronaut .jupiter .ring .layer-in {
+            position: absolute;
+            top: -5px;
+            left: -3px;
+            width: 205px;
+            height: 205px;
+            border: 2px solid #faf0db;
+            border: 2px solid white;
+            border-radius: 100%;
+            border-style: dashed;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: spin 30s linear 0s infinite;
+            z-index: 0;
+        }
+
+        .astronaut .jupiter .ring .layer-up {
+            position: absolute;
+            top: 0px;
+            left: 6px;
+            width: 180px;
+            height: 180px;
+            border: 2px solid #faf0db;
+            border: 2px solid white;
+            border-radius: 100%;
+            border-style: dotted;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: spin 30s linear 0s infinite;
+            z-index: 0;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateZ(-360deg);
+            }
+        }
+
+        .rocket {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            z-index: 1000;
+        }
+
+        audio {
+            position: absolute;
+            top: 50%;
+            left: 1700%;
+            transform: scale(200);
+            z-index: 100;
+            opacity: 0%;
+        }
+
+        .space .text {
+            position: absolute;
+            top: 10%;
+            left: 25%;
+            color: #2a353f;
+            font-size: 5rem;
+            font-weight: 800;
+            animation: shrink 5s ease-in-out 0s 1;
+            z-index: 1;
+            opacity: 0%;
+        }
+
+        .space .text-2 {
+            color: #464e57;
+            justify-self: center;
+        }
+
+        @keyframes shrink {
+            0% {
+                transform: translateY(180%);
+                opacity: 100%;
+            }
+
+            90% {
+                font-size: 5rem;
+                opacity: 100%;
+            }
+
+            95% {
+                font-size: 7rem;
+                opacity: 100%;
+            }
+
+            100% {
+                font-size: 0rem;
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="space">
+        <audio src="interstellar.mp3" controls autoplay loop></audio>
+        <div class="text">
+            <div class="text-1">EXPLORE THE</div>
+            <div class="text-2">DEPTH
+            </div>
+        </div>
+        <div class="astronaut">
+            <div class="helmet"></div>
+            <div class="face-outer"></div>
+            <div class="face-inner">
+                <div class="shine-1"></div>
+                <div class="jugaad"></div>
+                <div class="reflect"></div>
+                <div class="reflect-shine"></div>
+                <div class="shine-2"></div>
+                <div class="shine-3"></div>
+                <div class="shine-4"></div>
+            </div>
+            <div class="ear-left"></div>
+            <div class="ear-right"></div>
+            <div class="pipe">
+                <div class="line pipeline-1"></div>
+                <div class="line pipeline-2"></div>
+                <div class="line pipeline-3"></div>
+                <div class="line pipeline-4"></div>
+                <div class="line pipeline-5"></div>
+            </div>
+            <div class="arm-left"></div>
+            <div class="arm-right"></div>
+            <div class="hand-left">
+                <div class="fingers"></div>
+                <div class="joint"></div>
+                <div class="palm"></div>
+            </div>
+            <div class="hand-right">
+                <div class="fingers"></div>
+                <div class="joint"></div>
+                <div class="palm"></div>
+            </div>
+            <div class="heart">
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="box-left"></div>
+                <div class="box-right"></div>
+                <div class="shine-1"></div>
+                <div class="shine-2"></div>
+            </div>
+            <div class="foot-left">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+                <div class="line-4"></div>
+                <div class="line-5"></div>
+                <div class="line-6"></div>
+                <div class="line-7"></div>
+            </div>
+            <div class="foot-right">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+                <div class="line-4"></div>
+                <div class="line-5"></div>
+                <div class="line-6"></div>
+                <div class="line-7"></div>
+            </div>
+            <div class="butt"></div>
+            <div class="jupiter">
+                <div class="skin">
+                    <div class="skin-1"></div>
+                    <div class="skin-2"></div>
+                    <div class="skin-3"></div>
+                    <div class="skin-4"></div>
+                    <div class="skin-5"></div>
+                    <div class="skin-6"></div>
+                    <div class="skin-7"></div>
+                    <div class="skin-8"></div>
+                    <div class="skin-9"></div>
+                    <div class="skin-10"></div>
+                    <div class="skin-11"></div>
+                    <div class="skin-12"></div>
+                    <div class="skin-13"></div>
+                    <div class="skin-14"></div>
+                    <div class="skin-15"></div>
+                    <div class="skin-16"></div>
+                    <div class="skin-17"></div>
+                    <div class="skin-18"></div>
+                    <div class="skin-19"></div>
+                    <div class="skin-20"></div>
+                    <div class="skin-21"></div>
+                    <div class="skin-22"></div>
+                    <div class="skin-23"></div>
+                </div>
+                <div class="ring">
+                    <div class="layer-out"></div>
+                    <div class="layer-mid"></div>
+                    <div class="layer-in"></div>
+                    <div class="layer-up"></div>
+                </div>
+            </div>
+        </div>
+        <div class="stars">
+            <div class="star star1"></div>
+            <div class="star star2"></div>
+            <div class="star star3"></div>
+            <div class="star star4"></div>
+            <div class="star star5"></div>
+            <div class="star star6"></div>
+            <div class="star star7"></div>
+            <div class="star star8"></div>
+            <div class="star star9"></div>
+            <div class="star star10"></div>
+            <div class="star star11"></div>
+            <div class="star star12"></div>
+            <div class="star star13"></div>
+            <div class="star star14"></div>
+            <div class="star star15"></div>
+            <div class="star star16"></div>
+            <div class="star star17"></div>
+            <div class="star star18"></div>
+            <div class="star star19"></div>
+            <div class="star star20"></div>
+            <div class="star star21"></div>
+            <div class="star star22"></div>
+            <div class="star star23"></div>
+            <div class="star star24"></div>
+            <div class="star star25"></div>
+            <div class="star star26"></div>
+            <div class="star star27"></div>
+            <div class="star star28"></div>
+            <div class="star star29"></div>
+            <div class="star star30"></div>
+            <div class="star star31"></div>
+            <div class="star star32"></div>
+            <div class="star star33"></div>
+            <div class="star star34"></div>
+            <div class="star star35"></div>
+            <div class="star star36"></div>
+            <div class="star star37"></div>
+            <div class="star star38"></div>
+            <div class="star star39"></div>
+            <div class="star star40"></div>
+            <div class="star star41"></div>
+            <div class="star star42"></div>
+            <div class="star star43"></div>
+            <div class="star star44"></div>
+            <div class="star star45"></div>
+            <div class="star star46"></div>
+            <div class="star star47"></div>
+            <div class="star star48"></div>
+            <div class="star star49"></div>
+            <div class="star star50"></div>
+        </div>
+        <div class="earth">
+            <div class="clouds">
+                <div class="cloud1">
+                    <div class="cloud">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="rectangle"></div>
+                    </div>
+                </div>
+                <div class="cloud2">
+                    <div class="cloud">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="rectangle"></div>
+                    </div>
+                </div>
+                <div class="cloud3">
+                    <div class="cloud">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="rectangle"></div>
+                    </div>
+                </div>
+                <div class="cloud4">
+                    <div class="cloud">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="rectangle"></div>
+                    </div>
+                </div>
+                <div class="cloud5">
+                    <div class="cloud">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="rectangle"></div>
+                    </div>
+                </div>
+                <div class="cloud6">
+                    <div class="cloud">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="rectangle"></div>
+                    </div>
+                </div>
+                <div class="cloud-layer-2">
+                    <div class="cloud1">
+                        <div class="cloud">
+                            <div class="circle-big"></div>
+                            <div class="circle-small"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                    </div>
+                    <div class="cloud2">
+                        <div class="cloud">
+                            <div class="circle-big"></div>
+                            <div class="circle-small"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                    </div>
+                    <div class="cloud3">
+                        <div class="cloud">
+                            <div class="circle-big"></div>
+                            <div class="circle-small"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                    </div>
+                    <div class="cloud4">
+                        <div class="cloud">
+                            <div class="circle-big"></div>
+                            <div class="circle-small"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

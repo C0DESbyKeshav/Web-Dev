@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object Fit and Position</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            display: grid;
+            place-items: center;
+            place-items: end;
+
+            background-image: url("luffy.jpg");
+            /* By setting the background image, one can prevent the image to get downloaded by noobs. */
+
+            /* background-position: 50% 50%; */
+            /* background-position: center center; */
+            background-position: bottom right;
+
+            /* background-repeat: repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y; */
+            background-repeat: no-repeat;
+            /* This property comes in handy when the size of background-image is very small to fit the entire background. */
+
+            /* background-clip: content-box; */
+            /* Check out the MDN Reference to understand this property. */
+            /* NOTE: background-clip: text;
+                    color: transparent;
+                    text-shadow: none;
+                    
+            Upar ke 3 lines will give that image clipped to text effect. */
+        }
+
+        img {
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+            /* By setting the width and height of the image, the aspect ratio of the image gets disturbed. */
+
+            object-fit: fill;
+            /* By default property */
+
+            object-fit: contain;
+            /* Contain property sets the image to contain the size of image box without cropping the image. */
+
+            object-fit: scale-down;
+
+            object-fit: cover;
+            /* Cover property sets the image ratio to cover the entire size box of the image (NOTE: Not it's parent container) by cropping the image to fit. */
+
+            object-position: top right;
+            object-position: 20px 10px;
+            /* object-position: 50% 50%;
+            object-position: center center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="cat.jpg" alt="please provide an image url">
+    </div>
+</body>
+
+</html>

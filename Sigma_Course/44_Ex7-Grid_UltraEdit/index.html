@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid UltraEdit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .download-lang {
+            /* border: 1px solid black; */
+            display: grid;
+            width: max-content(100vw);
+            /* Setting this max-content is a life-saver trick for me.
+            To avoid that horizontal scroll bar. */
+            gap: 25px;
+            padding: 10px 200px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 0fr));
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .box {
+            background-color: #f9f9f9;
+            /* border: 1px solid red; */
+            border-radius: 5px;
+            width: 300px;
+            height: 200px;
+            display: grid;
+            justify-items: center;
+            align-content: space-around;
+        }
+
+        .box .lang-name {
+            font-size: 1.25rem;
+            font-weight: 650;
+        }
+
+        .box .translation {
+            font-size: 0.75rem;
+        }
+
+        .box .lower {
+            display: grid;
+            gap: 5px;
+            justify-items: center;
+        }
+
+        .box .lower .download-box {
+            background-color: #5cb85c;
+            padding: 0.5rem 0;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            width: 126px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .box .lower .download-box a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .box .lower .code-1 {
+            font-size: 0.650rem;
+            cursor: pointer;
+        }
+
+        .box .lower .code-2 {
+            padding: 0px 30px;
+            font-size: 0.5rem;
+            word-break: break-all;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Design the body of this website: 
+        https://bit.ly/UltraEdit-CWH -->
+
+    <div class="download-lang">
+        <div class="box">
+            <div class="lang-name">English</div>
+            <div class="translation" style="visibility:hidden">|</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_english_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">3D85A4AB6BA55590A24CC3BF26EB35AC2A7DD3AFC6194AFCC16894C7975506D3</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">Deutsch</div>
+            <div class="translation">German</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_german_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">64AE534532CFAAC9F99840B33D1330CC2CE57B1702897990674F6A4AAFB8E974</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">Italiano</div>
+            <div class="translation">Italian</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_italian_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">58DB3301916DCC1F0266B4FB5968CDE0CAD7A2F1A5B48A6E3180446ED1FE6152</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">Español</div>
+            <div class="translation">Spanish</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_spanish_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">EF9E3D26C32B1264291BC12CB9FD8DFC9DD4C9B9A414D514D6B4144F6664C8DE</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">français</div>
+            <div class="translation">French</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_french_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">7E871CB5076F077C76803B938965F49BA21B451C7B5043ED96D512DFFB6CE2E0</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">Português brasileiro</div>
+            <div class="translation">Brazilian Portuguese</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_portuguese_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">24D05D49EB8B2DA97D31DCD8998D93A476E2AA0A2893CFB66C3B0656A8BF935F</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">日本</div>
+            <div class="translation">Japanese</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_japanese_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">AFD88EEA7207154E724E24B62156A251EC2D1B8771860B4027C36918DA51E866</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">한국어</div>
+            <div class="translation">Korean</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_korean_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">3966DFC45997D0AF85B2C8E5B959FF43D2D4B4E1451B0D7CF8345D066250C896</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">华语</div>
+            <div class="translation">Chinese</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_chinese_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">017BFF42BD2C7DDC7B87E7176340D5A7C2640678FC88EAED752698897834BBCB</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="lang-name">華語</div>
+            <div class="translation">Traditional Chinese</div>
+            <div class="lower">
+                <div class="download-box"><a href="ue_chinese_traditional_64.exe">Download 64-bit</a></div>
+                <div class="code-1">SHA256</div>
+                <div class="code-2">D5E5809268D91F30A93E212FC7FE05702A6D826A586D6C175A64AEB2ACC0C6D0</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

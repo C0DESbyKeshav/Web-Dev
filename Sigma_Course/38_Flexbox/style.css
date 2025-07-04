@@ -36,6 +36,8 @@
     /* To make all the contents align to the center of the container without any unnecessary newline gaps between them, we don't use align-items, we rather use align-content 
     flex-wrap should be set to wrap for this to take effect. */
 
+    /* *Tip: Use align-items when only single row and align-content when more than one row. */
+
     flex-flow: row nowrap;
     /* flex-flow: <flex-direction> <flex-wrap>
     Nothing different just rather than setting two properties on two different lines, we can set both of them in a single line. */

@@ -1,0 +1,1070 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage about the use of CSS Transition Properties">
+    <title>CSS Transition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: whitesmoke;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .hover-me {
+            display: flex;
+            position: relative;
+        }
+
+        .hover-me img {
+            margin: 50px;
+            cursor: pointer;
+        }
+
+        .hover-me pre {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            position: absolute;
+            top: 100px;
+            left: 350px;
+        }
+
+        .hover-me pre p {
+            font-size: 5rem;
+            font-weight: 800;
+            align-self: center;
+        }
+
+        .vanish {
+            display: inline-block;
+            /* Setting the display to inline-block is mandatory to activate the transform property. */
+            transition: transform 0.5s ease;
+        }
+
+        .hover-me:hover pre .vanish {
+            transform: scale(0);
+        }
+
+        .slide-you {
+            display: inline-block;
+            /* Setting the display to inline-block is mandatory to activate the transform property. */
+            transition: transform 1s ease 0.1s;
+        }
+
+        .hover-me:hover pre .slide-you {
+            transform: translateX(-250px);
+        }
+
+        .like {
+            transition: color 1s ease-in-out 0.2s;
+        }
+
+        .hover-me:hover pre .like {
+            color: magenta;
+        }
+
+        .but {
+            text-align: end;
+            transform: translateX(600px);
+            font-size: 6rem;
+        }
+
+        .large-tiny {
+            transition: color 3s ease 0.8s, transform 1s ease 0.8s;
+        }
+
+        .hover-me:hover~.large-tiny {
+            transform: translateX(-600px);
+            color: red;
+        }
+
+        .align pre {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            transform: translateY(600px);
+            font-size: 6rem;
+            font-weight: 800;
+        }
+
+        .slide-up-i {
+            display: inline-block;
+            /* Setting the display to inline-block is mandatory to activate the transform property. */
+            transition: transform 0.5s ease 2s;
+        }
+
+        .hover-me:hover~.align pre .slide-up-i {
+            transform: translateY(-500px);
+        }
+
+        .hover-me img {
+            transition: transform 2s cubic-bezier(0.09, 0.5, 0, 0.99) 2.5s;
+        }
+
+        .hover-me:hover img {
+            transform: translate(420px, 420px);
+        }
+
+        .slide-up-you {
+            display: inline-block;
+            /* Setting the display to inline-block is mandatory to activate the transform property. */
+            transition: transform 0.5s ease 3s;
+        }
+
+        .hover-me:hover~.align pre .slide-up-you {
+            transform: translateY(-500px);
+        }
+
+        .slide-up-more {
+            display: inline-block;
+            /* Setting the display to inline-block is mandatory to activate the transform property. */
+            transition: transform 0.5s ease 3.5s;
+        }
+
+        .hover-me:hover~.align pre .slide-up-more {
+            transform: translateY(-500px);
+        }
+
+        .sidebar {
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+            transform: scaleX(0);
+            position: absolute;
+            top: 0%;
+            transition: transform 4s ease-in-out 4.5s;
+        }
+
+        .hover-me:hover~.sidebar {
+            transform: scaleX(1);
+        }
+
+        .floats {
+            display: inline-block;
+            /* Setting the display to inline-block is mandatory to activate the transform property. */
+            position: absolute;
+            transform: translateY(1000px);
+            transition: transform 100s ease 6s;
+        }
+
+        .hover-me:hover~.sidebar .floats {
+            transform: translateY(-250000px);
+        }
+
+        .message {
+            display: inline-block;
+            /* Setting the display to inline-block is mandatory to activate the transform property. */
+            margin-top: 200px;
+            margin-left: 500px;
+            text-align: center;
+            font-size: 5rem;
+            transform: scale(2);
+            color: white;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: 800;
+            transition: transform 0.5s ease 8s;
+        }
+
+        .hover-me:hover~.sidebar .message{
+            transform: scale(0);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="hover-me">
+            <img src="icon.png" alt="hover-me">
+            <pre>
+                <p> <span class="vanish">Things</span> I <span class="like">like</span> <span class="vanish">about</span> <span class="slide-you">you</span></p>
+<h1><span style="color:grey;" class="vanish">(Hover on heart to know)</span></h1></pre>
+        </div>
+        <h1 class="large-tiny but">BUT</h1>
+        <div class="align">
+            <pre><span class="slide-up-i">I</span>       <span class="slide-up-you">you</span> <span class="slide-up-more">more</span></pre>
+        </div>
+
+        <div class="sidebar">
+            <div class="floats">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="heart3.png" style="top:70%; left:17%; width:35px;">
+                <img src="heart1.png" style="top:87%; left:65%; width:39px;">
+                <img src="stars.png" style="top:70%; left:91%; width:36px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="heart3.png" style="top:18%; left:62%; width:33px;">
+                <img src="heart1.png" style="top:42%; left:91%; width:48px;">
+                <img src="heart1.png" style="top:29%; left:14%; width:30px;">
+                <img src="stars.png" style="top:8%; left:27%; width:35px;">
+                <img src="heart2.png" style="top:50%; left:95%; width:41px;">
+                <img src="stars.png" style="top:77%; left:3%; width:39px;">
+                <img src="heart3.png" style="top:98%; left:37%; width:30px;">
+                <img src="stars.png" style="top:91%; left:6%; width:27px;">
+                <img src="heart1.png" style="top:33%; left:71%; width:41px;">
+                <img src="heart1.png" style="top:45%; left:30%; width:26px;">
+                <img src="heart2.png" style="top:15%; left:63%; width:22px;">
+                <img src="heart1.png" style="top:14%; left:60%; width:22px;">
+                <img src="heart2.png" style="top:88%; left:29%; width:25px;">
+                <img src="heart2.png" style="top:13%; left:49%; width:20px;">
+                <img src="heart3.png" style="top:57%; left:96%; width:26px;">
+                <img src="stars.png" style="top:49%; left:63%; width:19px;">
+                <img src="heart2.png" style="top:6%; left:85%; width:20px;">
+                <img src="heart1.png" style="top:5%; left:79%; width:25px;">
+                <img src="heart3.png" style="top:44%; left:55%; width:21px;">
+                <img src="stars.png" style="top:61%; left:34%; width:42px;">
+                <img src="heart1.png" style="top:67%; left:2%; width:19px;">
+                <img src="stars.png" style="top:11%; left:78%; width:36px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="stars.png" style="top:21%; left:65%; width:43px;">
+                <img src="heart3.png" style="top:46%; left:7%; width:38px;">
+                <img src="stars.png" style="top:25%; left:11%; width:41px;">
+                <img src="heart2.png" style="top:74%; left:12%; width:19px;">
+                <img src="heart2.png" style="top:43%; left:99%; width:26px;">
+                <img src="heart3.png" style="top:53%; left:19%; width:47px;">
+                <img src="heart2.png" style="top:28%; left:57%; width:31px;">
+                <img src="heart3.png" style="top:70%; left:68%; width:25px;">
+                <img src="heart3.png" style="top:26%; left:93%; width:24px;">
+                <img src="heart1.png" style="top:70%; left:53%; width:31px;">
+                <img src="heart2.png" style="top:27%; left:67%; width:28px;">
+                <img src="stars.png" style="top:66%; left:75%; width:31px;">
+                <img src="stars.png" style="top:17%; left:53%; width:46px;">
+                <img src="heart2.png" style="top:11%; left:21%; width:34px;">
+                <img src="stars.png" style="top:7%; left:89%; width:24px;">
+                <img src="stars.png" style="top:36%; left:58%; width:46px;">
+                <img src="stars.png" style="top:34%; left:16%; width:29px;">
+                <img src="heart1.png" style="top:3%; left:55%; width:28px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:12%; left:87%; width:45px;">
+                <img src="stars.png" style="top:16%; left:45%; width:33px;">
+                <img src="heart1.png" style="top:19%; left:33%; width:27px;">
+                <img src="stars.png" style="top:56%; left:99%; width:27px;">
+                <img src="heart2.png" style="top:39%; left:83%; width:30px;">
+                <img src="stars.png" style="top:93%; left:10%; width:40px;">
+                <img src="heart2.png" style="top:69%; left:17%; width:44px;">
+                <img src="heart3.png" style="top:23%; left:47%; width:37px;">
+                <img src="heart3.png" style="top:89%; left:70%; width:20px;">
+                <img src="heart2.png" style="top:90%; left:35%; width:50px;">
+                <img src="stars.png" style="top:14%; left:38%; width:32px;">
+                <img src="heart1.png" style="top:88%; left:47%; width:20px;">
+                <img src="stars.png" style="top:30%; left:73%; width:20px;">
+                <img src="heart2.png" style="top:20%; left:7%; width:29px;">
+                <img src="heart3.png" style="top:35%; left:12%; width:28px;">
+                <img src="heart2.png" style="top:52%; left:15%; width:42px;">
+                <img src="heart2.png" style="top:31%; left:40%; width:38px;">
+                <img src="heart1.png" style="top:81%; left:38%; width:49px;">
+                <img src="heart2.png" style="top:47%; left:76%; width:39px;">
+                <img src="stars.png" style="top:98%; left:24%; width:22px;">
+                <img src="stars.png" style="top:82%; left:55%; width:23px;">
+                <img src="heart3.png" style="top:65%; left:68%; width:25px;">
+                <img src="heart1.png" style="top:76%; left:18%; width:46px;">
+                <img src="heart1.png" style="top:48%; left:12%; width:36px;">
+                <img src="stars.png" style="top:26%; left:19%; width:28px;">
+                <img src="heart1.png" style="top:23%; left:88%; width:29px;">
+                <img src="heart2.png" style="top:81%; left:9%; width:37px;">
+                <img src="heart2.png" style="top:55%; left:92%; width:48px;">
+                <img src="heart3.png" style="top:31%; left:27%; width:29px;">
+                <img src="heart3.png" style="top:13%; left:32%; width:43px;">
+                <img src="stars.png" style="top:43%; left:50%; width:30px;">
+                <img src="heart3.png" style="top:74%; left:44%; width:34px;">
+                <img src="heart1.png" style="top:9%; left:95%; width:50px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart1.png" style="top:12%; left:8%; width:42px;">
+                <img src="heart1.png" style="top:58%; left:5%; width:24px;">
+                <img src="heart2.png" style="top:22%; left:59%; width:40px;">
+                <img src="stars.png" style="top:86%; left:80%; width:50px;">
+                <img src="stars.png" style="top:39%; left:66%; width:48px;">
+                <img src="heart1.png" style="top:39%; left:98%; width:40px;">
+                <img src="heart3.png" style="top:91%; left:60%; width:49px;">
+                <img src="heart3.png" style="top:16%; left:73%; width:36px;">
+                <img src="heart1.png" style="top:37%; left:61%; width:34px;">
+                <img src="stars.png" style="top:67%; left:92%; width:44px;">
+                <img src="stars.png" style="top:50%; left:95%; width:41px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+                <img src="stars.png" style="top:73%; left:72%; width:35px;">
+                <img src="heart3.png" style="top:67%; left:39%; width:48px;">
+                <img src="heart3.png" style="top:22%; left:59%; width:40px;">
+                <img src="heart1.png" style="top:60%; left:77%; width:44px;">
+            </div>
+
+            <div class="message">
+                <div>YOUR SMILE</div>
+                <div>MELTS 🫠</div>
+                <div>ME AWAY</div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
