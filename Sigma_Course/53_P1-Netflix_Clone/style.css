@@ -822,8 +822,16 @@ body {
     }
 }
 
-@media only screen and (max-width:450px) {
+@media only screen and (max-width:400px) {
+    .main .nav {
+        max-width: 90vw;
+    }
+
     .trendings .cards .scroll:hover+.container .content {
-        transform: translateX(calc(-2.93*var(--center-width)));
+        transform: translateX(calc(-3.5*var(--center-width)));
+        -webkit-transform: translateX(calc(-3.5*var(--center-width)));
+        -moz-transform: translateX(calc(-3.5*var(--center-width)));
+        -ms-transform: translateX(calc(-3.5*var(--center-width)));
+        -o-transform: translateX(calc(-3.5*var(--center-width)));
     }
 }
