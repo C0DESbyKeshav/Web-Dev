@@ -1,0 +1,829 @@
+@font-face {
+    font-family: "Netflix Sans";
+    src: url("assets/fonts/NetflixSans-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Netflix Sans";
+    src: url("assets/fonts/NetflixSans-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Netflix Sans";
+    src: url("assets/fonts/NetflixSans-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Netflix Sans";
+    src: url("assets/fonts/NetflixSans-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+html {
+    font-family: "Netflix Sans", sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --center-width: 81%;
+}
+
+.main {
+    position: relative;
+    background-image: url(assets/images/bg.jpg);
+    object-fit: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.main .layer {
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.main .nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 92px;
+    width: 100%;
+    max-width: var(--center-width);
+    margin: auto;
+    z-index: 10;
+    position: relative;
+}
+
+.main .nav .logo img {
+    height: 40px;
+}
+
+.main .nav .buttons {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    color: white;
+}
+
+.language-button {
+    background-color: rgba(22, 22, 22, 0.7);
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    width: 123px;
+    border-radius: 3px;
+    padding: 5px 10px 3px 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    flex-wrap: nowrap;
+    position: relative;
+    font-weight: 400;
+    color: white;
+}
+
+.language-button select {
+    background-color: inherit;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.language-button select option {
+    color: black;
+    text-align: center;
+}
+
+.main .nav .buttons .signin-button {
+    display: grid;
+    place-items: center;
+    text-wrap-mode: nowrap;
+    background-color: red;
+    border-radius: 4px;
+    width: 75px;
+    font-size: .875rem;
+    font-weight: 500;
+    padding: 2px 8px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+}
+
+.main .center-head-container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin: auto;
+    width: 100%;
+    height: 70vh;
+    z-index: 2;
+}
+
+.main .center-head-container .center-head {
+    width: 45vw;
+    text-align: center;
+    color: white;
+}
+
+.main .center-head-container .center-head .service {
+    line-height: 4.375rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.main .center-head-container .center-head .price {
+    line-height: normal;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.user-details {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.center-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.center-buttons .email {
+    position: relative;
+    background-color: transparent;
+    max-width: 350px;
+    min-width: 180px;
+    height: 55px;
+    border: none;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    background-color: rgba(22, 22, 22, 0.7);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.center-buttons .email .placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    text-wrap: nowrap;
+    padding-left: 15px;
+    padding-top: 15px;
+    background-color: transparent;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+}
+
+.center-buttons .email .placeholder form {
+    position: absolute;
+    max-width: 90%;
+    width: auto;
+    background-color: transparent;
+}
+
+.center-buttons .email .placeholder form input {
+    top: 52%;
+    left: 4%;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 1;
+    width: 90%;
+}
+
+.center-buttons .email .placeholder:hover {
+    animation: shrink 1s ease-in-out 0s forwards;
+}
+
+.center-buttons .email .placeholder form input:hover {
+    opacity: 1;
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1, 1) translate(0px, 0px);
+        width: 100%;
+        height: 100%;
+    }
+
+    100% {
+        transform: scale(0.8, 0.8) translate(-50px, -15px);
+        width: 430px;
+        height: 70px;
+    }
+}
+
+.center-buttons .start {
+    background-color: #E50914;
+    width: 210px;
+    height: 55px;
+    border-radius: 3px;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+}
+
+.center-buttons .start:hover,
+.main .nav .buttons .signin-button:hover {
+    background-color: rgb(190, 0, 0);
+}
+
+.separator {
+    position: absolute;
+    top: 90vh;
+    z-index: 1;
+    width: 100%;
+    height: 25vh;
+    border: 4px solid red;
+    border-radius: 100%;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    border-top-left-radius: 100% 50%;
+    border-top-right-radius: 100% 50%;
+}
+
+.trendings {
+    position: relative;
+    /* Try removing the position property to get a different dynamic design. */
+    margin: auto;
+    z-index: 10;
+    width: 100%;
+    transform: translateY(-4vh);
+}
+
+.trendings .title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: var(--center-width);
+    margin: auto;
+}
+
+.trendings .cards {
+    width: var(--center-width);
+    margin: auto;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 15px;
+}
+
+.trendings .cards .container {
+    overflow: hidden;
+    padding: 8px 20px 8px 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.trendings .cards .container .content {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    gap: 40px;
+    transition: transform 2s ease 0s;
+}
+
+.trendings .cards .container .card {
+    width: 180px;
+    height: 250px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.trendings .cards .container .card img {
+    border-radius: inherit;
+    width: inherit;
+    height: inherit;
+    transition: all 0.2s ease-out 0s;
+    cursor: pointer;
+}
+
+.trendings .cards .container .card img:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.trendings .cards .container .card h1 {
+    position: absolute;
+    top: 50%;
+    left: -13%;
+    color: black;
+    -webkit-text-stroke: 2px white;
+    font-size: 6rem;
+    transition: all 0.2s ease-out 0s;
+    cursor: pointer;
+}
+
+.trendings .cards .container .card img:hover+h1 {
+    transform: scale(1.05, 1.05) translateX(-3px);
+}
+
+.trendings .cards .scroll {
+    width: 25px;
+    height: 120px;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
+    /* position: absolute;
+    left: calc(var(--center-width) + ((100% - var(--center-width))/2) + 0.8%);
+    top: 30%; */
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out 0s;
+}
+
+.trendings .cards .scroll:hover {
+    background-color: rgba(227, 225, 225, 0.3);
+}
+
+.trendings .cards .scroll:hover+.container .content {
+    transform: translateX(calc(-1.08*var(--center-width)));
+}
+
+.more {
+    width: var(--center-width);
+    margin: auto;
+    color: white;
+    margin-top: 30px;
+}
+
+.more .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.more .cards {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+
+.more .cards .card {
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+}
+
+.more .cards .card .head {
+    margin: 25px 15px 15px 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.more .cards .card .body {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0px 15px 55px 15px;
+}
+
+.more .cards .card .image {
+    /* margin-left: calc(300px - (72px + 16px)); */
+    display: flex;
+    justify-content: end;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.gap {
+    position: relative;
+    width: 100%;
+    height: 65px;
+}
+
+.faq {
+    width: var(--center-width);
+    margin: auto;
+    color: white;
+}
+
+.faq .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.faq .questions {
+    margin-top: 15px;
+    display: grid;
+    gap: 7px;
+}
+
+.faq .questions .bar {
+    display: grid;
+    gap: 1px;
+    position: relative;
+}
+
+.faq .questions .bar .question {
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: #2D2D2D;
+    padding: 1.65rem;
+    padding-right: 2.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}
+
+.faq .questions .bar .question:hover {
+    background-color: #414141;
+}
+
+.faq .questions .bar img {
+    position: absolute;
+    padding: 1.65rem;
+    right: 0;
+    cursor: pointer;
+}
+
+.faq .questions .bar img:hover {
+    transform: rotate(45deg);
+}
+
+.faq .questions .bar .answer {
+    background-color: #2D2D2D;
+    display: grid;
+    gap: 1.65rem;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    overflow: hidden;
+
+    max-height: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.faq .questions .bar img:hover+.answer {
+    max-height: 500px;
+    padding: 1.65rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.bottom-buttons {
+    color: white;
+    width: var(--center-width);
+    margin: auto;
+    text-align: center;
+}
+
+.bottom-buttons .center-buttons .email {
+    width: 560px;
+}
+
+.bottom-buttons .center-buttons .email .placeholder form input {
+    width: 490px;
+}
+
+.links {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    font-weight: 300;
+    height: auto;
+    width: var(--center-width);
+    margin: auto;
+    display: grid;
+    gap: 35px;
+}
+
+.links .title .call,
+.links .direct ul li {
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.links .direct ul {
+    display: grid;
+    gap: 15px;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 14px;
+    list-style-type: none;
+}
+
+.foot-button {
+    height: auto;
+    width: var(--center-width);
+    margin: auto;
+}
+
+.narrow-gap {
+    height: 40px;
+    width: 100%;
+}
+
+.disclaimer {
+    height: auto;
+    width: var(--center-width);
+    margin: auto;
+}
+
+.disclaimer .title {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.disclaimer .body {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.disclaimer .body .hide a {
+    color: skyblue;
+    cursor: pointer;
+}
+
+.disclaimer .body .hidden {
+    padding-top: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s ease 0s;
+}
+
+.disclaimer .body .hidden a:visited {
+    color: white;
+}
+
+.disclaimer .body .hide:hover+.hidden,
+.disclaimer .body .hidden:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1279px) {
+    :root {
+        --center-width: 85vw;
+    }
+
+
+    .main .center-head-container .center-head {
+        width: 35vw;
+    }
+
+    .main .center-head-container .center-head .service {
+        line-height: 3.125rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main .center-head-container .center-head .price {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .main .center-head-container .center-head .user-details {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .main .center-buttons .email {
+        width: 350px;
+    }
+
+    .main .center-buttons .start {
+        line-height: 18px;
+        font-size: 18px;
+    }
+
+    .trendings .cards .container .card {
+        width: 140px;
+        height: 200px;
+    }
+
+    .trendings .cards .container .card h1 {
+        font-size: 5rem;
+    }
+
+    .trendings .cards .scroll:hover+.container .content {
+        transform: translateX(calc(-0.72*var(--center-width)));
+    }
+
+    .more .cards {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .more .cards .card-2 {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .more .cards .card-3 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .more .cards .card .head {
+        font-size: 20px;
+    }
+
+    .more .cards .card .body {
+        margin-bottom: none;
+        margin-bottom: 5px;
+    }
+
+    .links .direct ul {
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 959px) {
+    :root {
+        --center-width: 95vw;
+    }
+
+    .main .nav .logo img {
+        height: 25px;
+    }
+
+    .main .center-head-container .center-head {
+        width: 50vw;
+    }
+
+    .main .center-head-container .center-head .service {
+        line-height: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main .center-head-container .center-head .price {
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+
+    .main .center-head-container .center-head .user-details {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .main .center-buttons .email {
+        width: 250px;
+    }
+
+    .main .center-buttons .start {
+        line-height: 18px;
+        font-size: 18px;
+        width: 180px;
+    }
+
+    .trendings .title {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    .trendings .cards {
+        margin-top: 8px;
+    }
+
+    .trendings .cards .container .card {
+        width: 110px;
+        height: 155px;
+    }
+
+    .trendings .cards .container .card h1 {
+        font-size: 4rem;
+    }
+
+    .trendings .cards .scroll:hover+.container .content {
+        transform: translateX(calc(-0.7*var(--center-width)));
+    }
+
+    .more .title {
+        font-size: 18px;
+    }
+
+    .more .cards {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: auto;
+    }
+
+    .more .cards .card-2 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .more .cards .card-3 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .more .cards .card .head {
+        font-size: 20px;
+    }
+
+    .more .cards .card .body {
+        margin-bottom: none;
+        margin-bottom: 5px;
+    }
+
+    .faq .title {
+        font-size: 18px;
+    }
+
+    .faq .questions .bar .question {
+        font-size: 18px;
+    }
+
+    .faq .questions .bar img:hover+.answer {
+        font-size: 18px;
+    }
+
+    .links .direct ul {
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .main .nav {
+        max-width: 85vw;
+    }
+
+    .main .center-head-container .center-head {
+        width: 75vw;
+    }
+
+    .links .direct ul {
+        grid-template-rows: repeat(16, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .trendings .cards .scroll:hover+.container .content {
+        transform: translateX(calc(-1.8*var(--center-width)));
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .trendings .cards .scroll:hover+.container .content {
+        transform: translateX(calc(-2.93*var(--center-width)));
+    }
+}
