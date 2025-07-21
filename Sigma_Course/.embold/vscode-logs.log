@@ -1897,3 +1897,7 @@ OpenJDK 64-Bit Server VM Temurin-21.0.6+7 (build 21.0.6+7-LTS, mixed mode, shari
 2025-07-20 16:19:09 info: Row(s) deleted
 2025-07-20 16:19:39 info: Row(s) deleted
 2025-07-20 16:19:40 info: Row(s) deleted
+2025-07-20 21:17:59 info: Row(s) deleted
+2025-07-21 16:27:23 info: Congratulations, your extension "Embold" is now active!
+2025-07-21 16:27:23 info: ************* init ****************
+2025-07-21 16:27:23 info: tempDirectory : c:\Users\Keshav Mandal\.vscode\extensions\embold-vscode.embold-0.3.1\temp
