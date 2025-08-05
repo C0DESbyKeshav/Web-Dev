@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --border-color: #CC7F22;
+            --border-color: maroon;
+
+            --head-color: #594C43;
+            --head-color: black;
+
+            --white: white;
+
+            --college-name: orange;
+            --college-name: #FEDFC1;
+
+            --body-color: #F2B66D;
+            --body-color: rgb(251, 211, 188);
+
+            --event-name-color: #513005;
+            --event-name-color: rgb(192, 70, 70);
+
+            --circle-color: #CA7108;
+            --circle-color: rgb(147, 73, 136);
+
+            --linecolor: #D7861F;
+            --linecolor: rgb(117, 51, 107);
+        }
+
+        .container {
+            border: 3px solid var(--border-color);
+            margin: auto;
+            width: 1120px;
+        }
+
+        .container .poster {
+            position: relative;
+        }
+
+        .container .poster .head {
+            display: flex;
+            background-color: var(--head-color);
+        }
+
+        .container .poster .head img {
+            height: 160px;
+            margin: 10px;
+            margin-left: 35px;
+        }
+
+        .container .poster .head .college-name {
+            display: flex;
+            flex-flow: column;
+            text-align: center;
+            margin-top: 12px;
+            margin-bottom: 130px;
+            line-height: 40px;
+        }
+
+        .container .poster .head .college-name p {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: sans-serif;
+            font-weight: 550;
+        }
+
+        .container .poster .head .college-name h1 {
+            color: var(--college-name);
+            font-size: 3.2rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 900;
+            /* letter-spacing: -1px; */
+            width: 900px;
+            line-height: 50px;
+        }
+
+        .container .poster .head .college-name .location {
+            color: var(--white);
+            font-size: 1.7rem;
+            font-weight: 530;
+            letter-spacing: -1px;
+        }
+
+        .container .poster .body {
+            position: absolute;
+            top: 220px;
+            left: 70px;
+            background-color: var(--body-color);
+            width: 980px;
+            z-index: 1;
+        }
+
+        .container .poster .body .event .name {
+            margin-left: 350px;
+            margin-top: 20px;
+            color: var(--event-name-color);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 800;
+            font-size: 2.5rem;
+            line-height: 65px;
+        }
+
+        .container .poster .body .event .year {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .container .poster .body .event .year .box {
+            background-color: var(--event-name-color);
+            color: var(--white);
+            padding: 0px 15px;
+            font-size: 4rem;
+        }
+
+        .container .poster .body .event .details .date-time {
+            margin-left: 250px;
+            margin-top: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            gap: 10px;
+        }
+
+        .container .poster .body .event .details .date-time .circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: var(--circle-color);
+            margin-top: 15px;
+        }
+
+        .container .poster .body .event .details .separator {
+            margin-left: 240px;
+            margin-top: 5px;
+            width: 520px;
+            height: 2.5px;
+            background-color: var(--linecolor);
+        }
+
+        .container .poster .body .event .details .venue {
+            margin-left: 300px;
+            margin-top: 1px;
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.7rem;
+            font-weight: 400;
+        }
+
+        .container .poster .image {
+            position: absolute;
+            top: 250px;
+            background-color: var(--white);
+            padding: 15px;
+            padding-left: 0px;
+            z-index: 2;
+        }
+
+        .container .poster .image img {
+            width: 350px;
+            height: 250px;
+        }
+
+        .container .poster .footer {
+            margin-top: 350px;
+            margin-bottom: 13px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container .poster .footer .name {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .container .poster .footer .post {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="poster">
+            <div class="head">
+                <img src="images/Adobe Express - file.png" alt="">
+                <div class="college-name">
+                    <p>Shree Shankar Narayan Education Trust's</p>
+                    <h1>PRAVIN ROHIDAS PATIL COLLEGE</h1>
+                    <h1>OF ENGINEERING AND TECHNOLOGY</h1>
+                    <p class="location">Mahavidyalaya Marg, Navghar, Bhayandar (E), Thane - 401 105</p>
+                </div>
+            </div>
+            <div class="body">
+                <div class="event">
+                    <div class="name">
+                        <h1>RANGOLI AND</h1>
+                        <h1>TATTOO MAKING</h1>
+                        <h1>COMPETITION</h1>
+                        <div class="year">
+                            <div class="box">2</div>
+                            <div class="box">0</div>
+                            <div class="box">2</div>
+                            <div class="box">5</div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="date-time">
+                            <p>Date: 11/08/2025</p>
+                            <div class="circle"></div>
+                            <p>Time: 02:30 pm</p>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="venue">
+                            <p>Venue: Auditorium (Ground floor)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <!-- <img src="images/Rangoli-dakhwa--1024x824.jpg.webp" alt=""> -->
+                <img src="images/d4731477cd04867c734eb1b4470f817e.jpg" alt="">
+            </div>
+            <div class="footer">
+                <div class="box">
+                    <div class="name">Shri. Rohidasji Patil</div>
+                    <div class="post">Chairman</div>
+                </div>
+                <div class="box">
+                    <div class="name">Shri. Maheshji Mhatre</div>
+                    <div class="post">Secretary</div>
+                </div>
+                <div class="box">
+                    <div class="name">Mrs. Ranjana B. Patil</div>
+                    <div class="post">CEO</div>
+                </div>
+                <div class="box">
+                    <div class="name">Dr. Devichand Rathod</div>
+                    <div class="post">Principal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -41,7 +41,7 @@ console.log(array.reverse());
 // * Looping through Arrays
 let a = [1, 84, 25, 35, 9];
 
-// for loop using Arrow function
+// forEach function using Arrow function
 a.forEach((value, index, array) => {
   console.log(value, index, array);
 });
@@ -90,9 +90,36 @@ console.log(newAr);
 
 // * Filter
 // Filters an array with values that passes a test. Creates a new array.
+ar = [1, 84, 25, 35, 9];
 const greaterThanSeven = (e) => {
   if (e > 7) return true;
   return false;
 };
 console.log(ar.filter(greaterThanSeven));
 // greaterThanSeven is a function jismein humlog return state store kar rahe hai for the condition if array ka element is greater than 7 or not and filters it out.
+
+// * Reduce
+// Reduces an array to a single value.
+ar = [1, 84, 25, 35, 9];
+const mul = (a, b) => {
+  return a * b;
+};
+// mul is just a simple arrow function that simply returns the multiplication product of two numbers passed to it.
+console.log(ar.reduce(mul));
+// reduce function will apply the mul function on each individual element with the next individual element of the array ar.
+// just like - reduce function array ar ke saare elements ka factorial nikal raha ho.
+// 1 * 84 = 84
+// 84 * 25 = 2100
+// 2100 * 35 = 73500
+// 73500 * 9 = 661500
+
+// * Array.from
+// converts something into array
+console.log(Array.from("Keshav"));
+// converts string "Keshav" into array elements.
+
+// * for....of
+// for-of loop can be used to get the values from an array.
+
+// * for....in
+// for-in loop can be used to get the keys from an array. 
