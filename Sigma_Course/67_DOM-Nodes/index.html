@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D0M- Child, Parent and Sibling Nodes</title>
+    <style>
+        .box {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            display: grid;
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- This container contains five boxes -->
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <th>Keshav</th>
+            <th>19</th>
+        </tr>
+    </table>
+
+    <script>
+        console.log(document.body)
+        console.log(document.body.childNodes)
+        // The enter and tab spaces which is also called newline, are considered as "text".
+
+        for (i = 0; i < document.body.childNodes.length; i++) {
+            console.log(document.body.childNodes[i])
+        }
+
+        console.log(document.body.childNodes[1].childNodes)
+
+        console.log(document.body.childNodes[1].firstChild)
+        console.log(document.body.childNodes[1].lastChild)
+        // The first and last child is text but what if I just want that it should ignore all the text childs and just give me the box1 as first element and so on...
+
+        console.log(document.body.firstElementChild)
+        console.log(document.body.childNodes[1].firstElementChild)
+        console.log(document.body.childNodes[1].lastElementChild)
+
+        console.log(document.body.childNodes[1].firstElementChild.style.backgroundColor = "yellow")
+
+        console.log(document.body.childNodes[1].lastElementChild.parentElement)
+
+        console.log(document.body.childNodes[1].children)
+        console.log(document.body.childNodes[1].children[2])
+        console.log(document.body.childNodes[1].children[2].nextElementSibling)
+        console.log(document.body.childNodes[1].children[2].previousElementSibling)
+        console.log(document.body.childNodes[1].children[2].previousSibling)
+
+        console.log(document.body.children)
+        console.log(document.body.children[1])
+        console.log(document.body.children[1].rows)
+        console.log(document.body.children[1].columns)
+        // For tables, there are many other properties like: 
+        // table.rows, table.columns, table.caption, table.tHead, table.tFoot, table.tBodies, tbody.rows, tr.sectionRowIndex, tr.rowIndex, td.cellIndex
+    </script>
+</body>
+
+</html>
