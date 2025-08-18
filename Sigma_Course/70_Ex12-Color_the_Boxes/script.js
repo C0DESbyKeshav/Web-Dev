@@ -1,3 +1,4 @@
+// * Wrong solution (Reason- Limited thinking):
 let colors = ["red", "green", "blue", "orange", "grey"];
 let bg = ["pink", "yellow", "gold", "aqua", "silver"];
 

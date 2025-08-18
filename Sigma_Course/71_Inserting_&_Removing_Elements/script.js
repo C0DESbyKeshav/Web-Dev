@@ -36,6 +36,8 @@ document.designMode = "off";
 // They are available in a property named dataset.
 // If an element has an attribute named "data-one", its available as element.dataset.one
 console.log(b.dataset);
+console.log(b.dataset.createdby);
+console.log(b.dataset.pulledby);
 
 // * Creating and Inserting an Element
 // Yeh karna tab zaroori padd jaata hai jab kahi aur se data aa raha hai, and I want ki DOM mein page ko bina reload kiye update ho jaaye data, tab JS ke through dynamically element create kar sakte hai.
