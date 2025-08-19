@@ -108,7 +108,7 @@ function createCard(vTitle, cName, vViews, yearsOld, duration, thumbnail) {
   // .duration:
   dur.style.backgroundColor = "rgba(22, 22, 22, 0.6)";
   dur.style.position = "absolute";
-  dur.style.borderRadius = "7px"
+  dur.style.borderRadius = "7px";
   dur.style.bottom = "10px";
   dur.style.right = "7px";
   dur.style.width = "50px";
@@ -117,7 +117,7 @@ function createCard(vTitle, cName, vViews, yearsOld, duration, thumbnail) {
   dur.style.fontWeight = "bold";
   dur.style.display = "grid";
   dur.style.placeItems = "center";
-  
+
   // .title:
   title.style.width = "1118px";
   title.style.fontSize = "1.98rem";
@@ -158,4 +158,13 @@ createCard(
   1,
   "6:14",
   "https://i.ytimg.com/vi/KtL-SQ20Q0s/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBy-oj2TIS9wHcc1zCvAkY4TfKkWA"
+);
+
+createCard(
+  "Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1",
+  "CodeWithHarry",
+  56000000,
+  1,
+  "31:20",
+  "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDf-xrqgUw55JSfKsoykKVhngkzRA"
 );

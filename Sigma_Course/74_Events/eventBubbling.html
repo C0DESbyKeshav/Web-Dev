@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child {
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+
+        .childContainer {
+            background-color: beige;
+            padding: 34px;
+            margin: 34px;
+        }
+
+        .container {
+            background-color: rgb(227, 227, 28);
+            padding: 34px;
+            margin: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am a child
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelector(".child").addEventListener("click", (e) => {
+            alert("child was clicked");
+            e.stopPropagation();
+            // Now, once we click on the child, the eventListener gets fired up for the .child and stops there, i.e. no further propagation fires to any of its parent container.
+            // Stops the event from bubbling up to parent elements. But, other event listeners on the same element will still run.
+
+            // e.stopImmediatePropagation()
+            // Stops bubbling (like stopPropagation()), AND also stops any other event listeners on the same element from running.
+        });
+
+        document.querySelector(".childContainer").addEventListener("click", () => {
+            alert("childContainer was clicked");
+        });
+
+        document.querySelector(".container").addEventListener("click", () => {
+            alert("container was clicked");
+        });
+
+
+        // * setTimeout and setInterval:
+        function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+        setInterval(() => {
+            document.querySelector(".childContainer").style.backgroundColor = getRandomColor();
+        }, 1000);
+        // Sets a random background color to the child container at every 1 sec time interval.
+
+        // To clear this setInterval, run the following in the console:
+        // clearInterval(1);
+
+        // setTimeout:
+        setTimeout(() => {
+            document.querySelector(".container").style.backgroundColor = getRandomColor();
+        }, 3000);
+        // Sets a random background color to the container after 3 sec but only ONCE.
+
+        // To clear this setTimeout, run the following in the console:
+        // clearTimeout(1);
+    </script>
+</body>
+
+</html>
